@@ -1,0 +1,76 @@
+@font-face {
+  font-family: NooaDemiSerif;
+  src: url(../fonts/NooaDemiSerif-Regular.woff);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Prompt', sans-serif;
+  color: $primary;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+h1 {
+  &.title {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    @include media('<mobile') {
+      font-size: 2rem;
+    }
+  }
+}
+
+h2 {
+  &.subtitle {
+    font-size: 2rem;
+    text-transform: none;
+    @include media('<mobile') {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+figcaption,
+.caption {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  h2 {
+    &.title {
+      margin: 2rem 0 2rem 0;
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: 0.2rem;
+      @include media('<mobile') {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  h3 {
+    &.subtitle {
+      font-size: 2rem;
+      text-transform: none;
+      @include media('<mobile') {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+p {
+  font-weight: 200;
+  letter-spacing: 0.04rem;
+  line-height: 2.13;
+}

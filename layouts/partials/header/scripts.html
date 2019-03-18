@@ -1,0 +1,27 @@
+<script>
+  window.sr = ScrollReveal()
+  sr.reveal('.header', {
+    duration: 2000,
+    origin: 'top',
+    distance: '20px',
+  })
+
+  var $window = $(window)
+  var $header = $('.header')
+  var $checkbox = $('#menuToggle > :checkbox')
+
+  $window.scroll(function() {
+    var height = $header.height()
+    var scrollTop = $window.scrollTop()
+
+    if (scrollTop >= height) {
+      $header.addClass('transparent')
+    } else {
+      $header.removeClass('transparent')
+    }
+  })
+
+  $('#page').on('click', function() {
+    $checkbox.prop('checked', false)
+  })
+</script>

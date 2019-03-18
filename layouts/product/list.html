@@ -1,0 +1,24 @@
+{{ define "content" }}
+{{ partial "carousel/site-carousel.html" . }}
+<div class="content-product">
+  <div class="collection">
+    <div class="page-header">
+      <h1 class="title">brisuthi collection</h1>
+    </div>
+  </div>
+  <div class="quote-container container">
+    {{ $quoteImg := .Resources.GetMatch "quote-banner.png" }}
+    <img src="{{ $quoteImg.RelPermalink }}" alt="quote" />
+    <div class="quote">
+      <h2>simplicity<br />of<br />nature</h2>
+      <hr />
+      <h3>empowers</h3>
+      <h3>unparalleled</h3>
+      <h3>beauty</h3>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ define "javascript" }}
+{{ partial "carousel/scripts.html" }}
+{{ end }}

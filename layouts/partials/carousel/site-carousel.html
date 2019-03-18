@@ -1,0 +1,11 @@
+<div class="swiper-container carousel">
+  <div class="swiper-wrapper">
+    {{ range .Resources.Match "*-carousel.*" }}
+    <div
+      class="swiper-slide"
+      style="background-image:url({{.RelPermalink}})"
+    ></div>
+    {{ end }}
+  </div>
+</div>
+<div class="swiper-pagination"></div>

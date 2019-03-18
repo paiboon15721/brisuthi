@@ -1,0 +1,16 @@
+.content-press {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .press-list {
+    li {
+      margin-top: 10rem;
+
+      figcaption {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

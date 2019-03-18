@@ -1,0 +1,10 @@
+.gallery-list {
+  display: grid;
+  grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+  grid-gap: 3rem;
+  height: 100rem;
+
+  @include media("<desktop", ">mobile") {
+    height: 200rem;
+  }
+}

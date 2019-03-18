@@ -1,0 +1,39 @@
+.header {
+  position: fixed;
+  background-color: $background-color;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: $header-height;
+  padding: 0 4rem 0 4rem;
+  align-items: center;
+  z-index: 2;
+  transition: background-color 0.2s linear;
+
+  &.transparent {
+    background-color: transparent;
+    transition: background-color 0.2s linear;
+  }
+
+  @include media('<mobile') {
+    height: $header-height - 3;
+  }
+
+  .search {
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+  }
+
+  .menu-btn {
+    width: 2rem;
+    @include media('<tablet') {
+      p {
+        display: none;
+      }
+    }
+  }
+}

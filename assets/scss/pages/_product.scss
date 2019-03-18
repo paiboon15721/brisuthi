@@ -1,0 +1,56 @@
+.content-product {
+  .collection {
+    background-color: #f5f5f5;
+  }
+  .quote-container {
+    display: flex;
+    justify-content: center;
+
+    @include media('<mobile') {
+      flex-flow: column nowrap;
+    }
+
+    img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      @include media('<mobile') {
+        width: 100%;
+      }
+    }
+
+    .quote {
+      margin-left: 3rem;
+      @include media('<mobile') {
+        margin: 3rem 0 0 0;
+      }
+
+      h2 {
+        font-size: 5rem;
+        letter-spacing: 0.433rem;
+        font-weight: 300;
+        line-height: 8rem;
+        @include media('<tablet') {
+          font-size: 4rem;
+          line-height: 6rem;
+          letter-spacing: 0.2rem;
+        }
+        @include media('<mobile') {
+          font-size: 3rem;
+        }
+      }
+
+      hr {
+        width: 10rem;
+        margin: 2rem 0 3rem 0;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 0.15rem;
+        line-height: 4rem;
+      }
+    }
+  }
+}

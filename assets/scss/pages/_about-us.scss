@@ -1,0 +1,45 @@
+.content-about-us {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .content {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include media('<tablet') {
+      flex-flow: column nowrap;
+    }
+    img {
+      margin-right: 3rem;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include media('<tablet') {
+        margin: 0 0 3rem 0;
+      }
+    }
+
+    .philosophy {
+      display: flex;
+      flex-flow: column nowrap;
+
+      @include media('<mobile') {
+        align-items: center;
+      }
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        text-indent: 3rem;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

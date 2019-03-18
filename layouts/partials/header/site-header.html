@@ -1,0 +1,23 @@
+<header class="header">
+  <nav class="navigation" role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+  <a href="/">
+    <div class="logo">
+      <h1>brisuthi</h1>
+      <h2>the certified organic cult</h2>
+    </div>
+  </a>
+  <img class="search" src="/img/icon/magnifying-glass.svg" alt="Search" />
+</header>

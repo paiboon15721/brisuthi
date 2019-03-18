@@ -1,0 +1,122 @@
+.navigation {
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+
+    input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      cursor: pointer;
+      opacity: 0; /* hide this */
+      z-index: 2; /* and place it over the hamburger */
+      -webkit-touch-callout: none;
+
+      &:checked {
+        ~ span {
+          opacity: 1;
+          transform: rotate(45deg) translate(-2px, -1px);
+
+          &:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+          }
+
+          &:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+          }
+        }
+
+        ~ #menu {
+          transform: none;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      width: 29px;
+      height: 2px;
+      margin-bottom: 6px;
+      position: relative;
+      background: $primary;
+      border-radius: 3px;
+
+      z-index: 1;
+
+      transform-origin: 4px 0px;
+
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
+
+      &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+    }
+
+    #menu {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      position: absolute;
+      width: 30vw;
+      overflow: auto;
+      margin: -68px 0 0 -40px;
+      height: 100vh;
+      padding-top: 12rem;
+      background: $background-color;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.7s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+      @include media('<mobile') {
+        margin: -53px 0 0 -40px;
+        width: 60vw;
+      }
+
+      @include media('<desktop', '>mobile') {
+        width: 45vw;
+      }
+
+      li {
+        margin-bottom: 4rem;
+        text-align: center;
+        width: 50%;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        border-bottom: 1.2px solid transparent;
+        letter-spacing: 0.15rem;
+
+        &:hover, &.active {
+          border-bottom: 1.2px solid $primary;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+        }
+
+        @include media('<mobile') {
+          font-size: 1.6rem;
+          width: 60%;
+        }
+      }
+    }
+  }
+}

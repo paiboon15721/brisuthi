@@ -1,0 +1,15 @@
+{
+  "name": "brisuthi",
+  "version": "1.0.0",
+  "description": "brisuthi web page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paiboon Auengkongkatong",
+  "license": "ISC",
+  "dependencies": {
+    "include-media": "^1.4.9",
+    "postcss-cli": "^6.1.2"
+  }
+}

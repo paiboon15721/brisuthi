@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $background-color;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  margin-top: $header-height;
+}
+
+.page-header {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container {
+  @include media('<desktop-large') {
+    padding: 0 10% 0 10%;
+  }
+  @include media('<desktop') {
+    padding: 0 5% 0 5%;
+  }
+  padding: 0 20% 0 20%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}

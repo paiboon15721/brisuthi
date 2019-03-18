@@ -1,0 +1,23 @@
+.logo {
+  font-family: NooaDemiSerif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    font-size: 4rem;
+    margin: 0 0 1rem 0;
+    @include media('<desktop') {
+      font-size: 3rem;
+    }
+    @include media('<tablet') {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
