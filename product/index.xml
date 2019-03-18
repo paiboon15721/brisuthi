@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Product on Brisuthi</title>
-    <link>http://example.org/product/</link>
+    <link>https://paiboon15721.github.io/brisuthi/product/</link>
     <description>Recent content in Product on Brisuthi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Mar 2019 10:04:57 +0700</lastBuildDate>
     
-	<atom:link href="http://example.org/product/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://paiboon15721.github.io/brisuthi/product/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rose Damascus Water</title>
-      <link>http://example.org/product/rose-damascus-water/</link>
+      <link>https://paiboon15721.github.io/brisuthi/product/rose-damascus-water/</link>
       <pubDate>Mon, 18 Mar 2019 19:43:32 +0700</pubDate>
       
-      <guid>http://example.org/product/rose-damascus-water/</guid>
+      <guid>https://paiboon15721.github.io/brisuthi/product/rose-damascus-water/</guid>
       <description></description>
     </item>
     
     <item>
       <title>African Baobab Oil Treatment Cleanser</title>
-      <link>http://example.org/product/african-baobab-oil-treatment-cleanser/</link>
+      <link>https://paiboon15721.github.io/brisuthi/product/african-baobab-oil-treatment-cleanser/</link>
       <pubDate>Mon, 18 Mar 2019 19:43:12 +0700</pubDate>
       
-      <guid>http://example.org/product/african-baobab-oil-treatment-cleanser/</guid>
+      <guid>https://paiboon15721.github.io/brisuthi/product/african-baobab-oil-treatment-cleanser/</guid>
       <description></description>
     </item>
     
     <item>
       <title>French Geranium Cleansing Gel</title>
-      <link>http://example.org/product/french-geranium-cleansing-gel/</link>
+      <link>https://paiboon15721.github.io/brisuthi/product/french-geranium-cleansing-gel/</link>
       <pubDate>Mon, 18 Mar 2019 19:41:31 +0700</pubDate>
       
-      <guid>http://example.org/product/french-geranium-cleansing-gel/</guid>
+      <guid>https://paiboon15721.github.io/brisuthi/product/french-geranium-cleansing-gel/</guid>
       <description></description>
     </item>
     
