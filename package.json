@@ -8,6 +8,7 @@
   },
   "author": "Paiboon Auengkongkatong",
   "license": "ISC",
+  "homepage": "https://paiboon15721.github.io/brisuthi",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "include-media": "^1.4.9",
