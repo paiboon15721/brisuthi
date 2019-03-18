@@ -4,12 +4,14 @@
   "description": "brisuthi web page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "rimraf public && hugo && gh-pages -d public"
   },
   "author": "Paiboon Auengkongkatong",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "include-media": "^1.4.9",
-    "postcss-cli": "^6.1.2"
+    "postcss-cli": "^6.1.2",
+    "rimraf": "^2.6.3"
   }
 }
