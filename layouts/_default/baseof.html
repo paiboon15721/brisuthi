@@ -38,6 +38,17 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     {{ partial "header/scripts.html" }}
     {{ partial "footer/scripts.html" }}
+    <script>
+      var fade = {
+        mobile: false,
+        duration: 2000,
+        distance: '300px',
+        viewFactor: 0.2,
+      }
+      var fadeLeft = Object.assign({}, fade, { origin: 'left' })
+      var fadeRight = Object.assign({}, fade, { origin: 'right' })
+      var fadeBottom = Object.assign({}, fade, { origin: 'bottom' })
+    </script>
     {{ block "javascript" . }}
     {{ end }}
   </body>

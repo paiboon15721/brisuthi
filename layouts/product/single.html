@@ -41,3 +41,12 @@
   />
 </div>
 {{ end }}
+{{ define "javascript" }}
+<script>
+  sr.reveal('.content-product-detail .information img', fadeLeft)
+  sr.reveal('.content-product-detail .information .detail', fadeRight)
+  sr.reveal('.content-product-detail .benefit', fadeLeft)
+  sr.reveal('.content-product-detail .direction', fadeRight)
+  sr.reveal('.content-product-detail .banner', fadeBottom)
+</script>
+{{ end }}

@@ -106,16 +106,6 @@
 {{ define "javascript" }}
 {{ partial "carousel/scripts.html" }}
 <script>
-  var fade = {
-    mobile: false,
-    duration: 2000,
-    distance: '300px',
-    viewFactor: 0.2,
-  }
-  var fadeLeft = Object.assign({}, fade, { origin: 'left' })
-  var fadeRight = Object.assign({}, fade, { origin: 'right' })
-  var fadeBottom = Object.assign({}, fade, { origin: 'bottom' })
-
   sr.reveal('.section-1 > li:nth-child(1)', fadeLeft)
   sr.reveal('.section-1 > li:nth-child(2)', fadeBottom)
   sr.reveal('.section-1 > li:nth-child(3)', fadeBottom)

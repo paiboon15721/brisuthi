@@ -8,9 +8,9 @@
     <div class="philosophy">
       <h2>our philosophy</h2>
       <p>
-        Quest for perfect balance between sustainable beauty,
-        precious gifts from nature and urban lifestyle empowers us to create
-        Brisuthi, commonly defined as "Pure in Thai".
+        Quest for perfect balance between sustainable beauty, precious gifts
+        from nature and urban lifestyle empowers us to create Brisuthi, commonly
+        defined as "Pure in Thai".
       </p>
       <p>
         We are attracted by organic beauty and strong passion inspired by nature
@@ -29,4 +29,10 @@
     </div>
   </div>
 </div>
+{{ end }}
+{{ define "javascript" }}
+<script>
+  sr.reveal('.content-about-us img', fadeLeft)
+  sr.reveal('.content-about-us .philosophy', fadeRight)
+</script>
 {{ end }}
