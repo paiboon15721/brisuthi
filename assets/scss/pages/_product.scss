@@ -5,13 +5,36 @@
     padding: 5rem;
 
     .product-list {
-      margin: 5rem 10rem 0 10rem;
-      border: 1px solid red;
+      margin: 5rem 8rem 0 8rem;
+
+      @include media('<desktop-large') {
+        margin: 5rem 5rem 0 5rem;
+      }
+
+      @include media('<desktop-medium') {
+        margin: 5rem 0 0 0;
+      }
+
+      .swiper-button {
+        &-next,
+        &-prev {
+          @include media('<desktop', '>=1060px') {
+            display: none;
+          }
+
+          @include media('<900px', '>=750px') {
+            display: none;
+          }
+
+          @include media('<=500px') {
+            display: none;
+          }
+        }
+      }
 
       .swiper-wrapper {
         .swiper-slide {
-          height: 65rem;
-          border: 1px solid red;
+          height: 63rem;
 
           img {
             width: 100%;
@@ -21,6 +44,17 @@
 
           .caption {
             padding: 0 5rem 0 5rem;
+            @include media('<desktop', '>=1060px') {
+              padding: 0;
+            }
+
+            @include media('<900px', '>=750px') {
+              padding: 0;
+            }
+
+            @include media('<=500px') {
+              padding: 0;
+            }
 
             h2 {
               font-size: 1.6rem;
