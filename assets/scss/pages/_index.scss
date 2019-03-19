@@ -1,4 +1,68 @@
 .content-index {
+  .hover-container {
+    position: relative;
+    cursor: pointer;
+
+    .overlay {
+      position: absolute;
+      background-color: $primary;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+    }
+
+    &:hover {
+      .overlay {
+        opacity: 0.5;
+        @include media('<mobile') {
+          opacity: 0;
+        }
+      }
+
+      .hover-text {
+        opacity: 1;
+        @include media('<mobile') {
+          opacity: 0;
+        }
+      }
+    }
+
+    .hover-text {
+      transition: 0.5s ease;
+      color: #fff;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      text-align: center;
+
+      hr {
+        width: 30%;
+        margin: 3rem 0 3rem 0;
+      }
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 300;
+      }
+
+      p {
+        text-transform: none;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  figcaption {
+    font-size: 1.4rem;
+  }
+
   .section-1 {
     margin-top: 10rem;
     li {
