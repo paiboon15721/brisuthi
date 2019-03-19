@@ -4,6 +4,13 @@
   <div class="collection">
     <div class="page-header">
       <h1 class="title">brisuthi collection</h1>
+      {{ range .Pages }}
+      {{ $image := .Resources.GetMatch "product.png" }}
+      <li>
+        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        <img src="{{ $image.RelPermalink }}" alt="" />
+      </li>
+      {{ end }}
     </div>
   </div>
   <div class="quote-container container">
