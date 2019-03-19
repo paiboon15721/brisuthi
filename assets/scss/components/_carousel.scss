@@ -2,10 +2,6 @@
   width: 100%;
   height: 60rem;
 
-  @include media('<mobile') {
-    margin-top: $header-height - 3;
-  }
-
   @include media('<desktop-large') {
     height: 55rem;
   }

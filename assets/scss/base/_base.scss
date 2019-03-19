@@ -19,6 +19,10 @@ li {
 
 main {
   margin-top: $header-height;
+
+  @include media('<mobile') {
+    margin-top: $header-height - 3;
+  }
 }
 
 .page-header {

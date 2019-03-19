@@ -8,30 +8,13 @@
   </div>
   <div class="swiper-container img-slider">
     <div class="swiper-wrapper">
+      {{ range (readDir "/static/img/index/instagram") }}
+      {{ $image := .Name | printf "img/index/instagram/%s" | relURL }}
       <div
         class="swiper-slide"
-        style="background-image:url(/img/index/instagram/01.png)"
+        style="background-image:url({{$image}})"
       ></div>
-      <div
-        class="swiper-slide"
-        style="background-image:url(/img/index/instagram/02.png)"
-      ></div>
-      <div
-        class="swiper-slide"
-        style="background-image:url(/img/index/instagram/03.png)"
-      ></div>
-      <div
-        class="swiper-slide"
-        style="background-image:url(/img/index/instagram/04.png)"
-      ></div>
-      <div
-        class="swiper-slide"
-        style="background-image:url(/img/index/instagram/05.png)"
-      ></div>
-      <div
-        class="swiper-slide"
-        style="background-image:url(/img/index/instagram/06.png)"
-      ></div>
+      {{ end }}
     </div>
   </div>
   <div class="footer-link">

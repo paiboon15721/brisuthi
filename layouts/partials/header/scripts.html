@@ -9,6 +9,7 @@
   var $window = $(window)
   var $header = $('.header')
   var $checkbox = $('#menuToggle > :checkbox')
+  $checkbox.prop('checked', false)
 
   $window.scroll(function() {
     var height = $header.height()
