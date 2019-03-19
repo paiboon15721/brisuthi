@@ -10,15 +10,22 @@
           <div class="swiper-slide">
             {{ $image := .Resources.GetMatch "product.png" }}
             <img src="{{ $image.RelPermalink }}" alt="" />
-            <h2>{{ .Title }}</h2>
-            <p>{{ .Content | truncate 150 }}</p>
-            <a href="{{.Permalink}}">VIEW</a>
+            <div class="caption">
+              <h2>{{ .Title }}</h2>
+              <p>{{ .Content | truncate 120 }}</p>
+              <a href="{{.Permalink}}"
+                >VIEW<span
+                  class="icon"
+                  style="background:url({{`img/icon/right-arrow.svg`|relURL}}) no-repeat;"
+                ></span
+              ></a>
+            </div>
           </div>
           {{ end }}
-          <div class="swiper-pagination product-list-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
         </div>
+        <div class="swiper-pagination product-list-pagination"></div>
+        <div class="swiper-button-next swiper-button-black"></div>
+        <div class="swiper-button-prev swiper-button-black"></div>
       </div>
     </div>
   </div>
@@ -37,4 +44,19 @@
 {{ end }}
 {{ define "javascript" }}
 {{ partial "carousel/scripts.html" }}
+<script>
+  new Swiper('.product-list', {
+    slidesPerView: 3,
+    autoplay: true,
+    loop: true,
+    pagination: {
+      el: '.product-list-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+</script>
 {{ end }}
