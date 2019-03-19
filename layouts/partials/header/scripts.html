@@ -8,17 +8,25 @@
 
   var $window = $(window)
   var $header = $('.header')
+  var $main = $('main')
+  var $logo = $('.header .logo')
   var $checkbox = $('#menuToggle > :checkbox')
   $checkbox.prop('checked', false)
 
   $window.scroll(function() {
     var height = $header.height()
+    var pageHeight = $header.height() + $main.height()
     var scrollTop = $window.scrollTop()
 
     if (scrollTop >= height) {
       $header.addClass('transparent')
     } else {
       $header.removeClass('transparent')
+    }
+    if (scrollTop >= pageHeight) {
+      $logo.addClass('transparent')
+    } else {
+      $logo.removeClass('transparent')
     }
   })
 

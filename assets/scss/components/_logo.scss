@@ -4,6 +4,10 @@
   align-items: center;
   flex-direction: column;
 
+  &.transparent {
+    display: none;
+  }
+
   h1 {
     font-weight: 300;
     letter-spacing: 0.3rem;
