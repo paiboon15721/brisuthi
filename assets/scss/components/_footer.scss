@@ -1,6 +1,12 @@
 footer {
   border-top: 1px solid rgba(0, 0, 0, 0.16);
   margin-top: 20rem;
+  @include media('<tablet') {
+    margin-top: 15rem;
+  }
+  @include media('<mobile') {
+    margin-top: 10rem;
+  }
 
   .follow-us {
     display: flex;

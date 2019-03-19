@@ -1,3 +1,43 @@
 {{ define "content" }}
-<h1>product single</h1>
+<div class="content-product-detail container">
+  <div class="information">
+    {{ $image := .Resources.GetMatch "product.png" }}
+    <img src="{{ $image.RelPermalink }}" alt="product" />
+    <div class="detail">
+      <h1>{{ .Title }}</h1>
+      <div class="size-price">
+        <p>size : {{ .Params.size | int | lang.NumFmt 0 }} ml.</p>
+        <p>price : {{ .Params.price | int | lang.NumFmt 0 }} baht</p>
+      </div>
+      <div class="content">
+        <p>{{ .Content }}</p>
+      </div>
+      <div class="ingredients">
+        <h2>main ingredients</h2>
+        <ul>
+          {{ range.Params.ingredients }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    <div class="benefit">
+      <h2>benefits</h2>
+      <ul>
+        {{ range.Params.benefits }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="direction">
+      <h2>direction</h2>
+      <p>{{ .Params.direction }}</p>
+    </div>
+  </div>
+  <img
+    class="banner"
+    src="{{ `img/product/banner/banner.png` | relURL }}"
+    alt="banner"
+  />
+</div>
 {{ end }}

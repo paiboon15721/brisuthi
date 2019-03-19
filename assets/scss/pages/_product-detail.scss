@@ -1,0 +1,93 @@
+.content-product-detail {
+  margin-top: 15rem;
+
+  @include media('<mobile') {
+    margin-top: 10rem;
+  }
+
+  .information {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include media('<tablet') {
+      justify-content: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-transform: capitalize;
+      margin: 3rem 0 1.5rem 0;
+    }
+
+    img {
+      width: 49%;
+      object-fit: cover;
+
+      @include media('<tablet') {
+        width: 50%;
+        height: 50%;
+        margin-bottom: 4rem;
+      }
+      @include media('<mobile') {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2.8rem;
+    }
+
+    ul {
+      font-size: 1.5rem;
+      font-weight: 200;
+      line-height: 2.5rem;
+
+      li:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .detail {
+      width: 49%;
+      @include media('<tablet') {
+        width: 100%;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.4rem;
+        font-weight: 300;
+        @include media('<mobile') {
+          font-size: 1.8rem;
+        }
+      }
+
+      .size-price {
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 1rem 0 1rem 0;
+      }
+    }
+
+    .benefit,
+    .direction {
+      width: 49%;
+      @include media('<tablet') {
+        width: 100%;
+      }
+    }
+  }
+
+  .banner {
+    margin-top: 10rem;
+    width: 100%;
+    object-fit: cover;
+
+    @include media('<tablet') {
+      margin-top: 5rem;
+    }
+  }
+}
