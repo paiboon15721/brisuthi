@@ -21,7 +21,7 @@
     }
 
     img {
-      width: 49%;
+      width: 48.2%;
       object-fit: cover;
 
       @include media('<tablet') {
@@ -51,7 +51,7 @@
     }
 
     .detail {
-      width: 49%;
+      width: 48.2%;
       @include media('<tablet') {
         width: 100%;
       }
@@ -74,7 +74,7 @@
 
     .benefit,
     .direction {
-      width: 49%;
+      width: 48.2%;
       @include media('<tablet') {
         width: 100%;
       }

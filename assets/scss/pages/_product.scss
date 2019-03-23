@@ -101,9 +101,13 @@
     }
 
     img {
+      margin-top: 2rem;
       width: 50%;
       height: 100%;
       object-fit: cover;
+      @include media('<desktop-medium') {
+        margin-top: 1.2rem;
+      }
       @include media('<mobile') {
         width: 100%;
       }
@@ -120,7 +124,7 @@
         letter-spacing: 0.433rem;
         font-weight: 300;
         line-height: 8rem;
-        @include media('<tablet') {
+        @include media('<desktop-medium') {
           font-size: 4rem;
           line-height: 6rem;
           letter-spacing: 0.2rem;
