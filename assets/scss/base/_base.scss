@@ -32,9 +32,12 @@ main {
 
 .container {
   @include media('<desktop-large') {
-    padding: 0 10% 0 10%;
+    padding: 0 20% 0 20%;
   }
   @include media('<desktop') {
+    padding: 0 15% 0 15%;
+  }
+  @include media('<mobile') {
     padding: 0 5% 0 5%;
   }
   padding: 0 20% 0 20%;

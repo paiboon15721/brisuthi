@@ -23,17 +23,8 @@
   }
 
   .search {
-    width: 2.4rem;
-    height: 2.4rem;
-    cursor: pointer;
-  }
-
-  .menu-btn {
     width: 2rem;
-    @include media('<tablet') {
-      p {
-        display: none;
-      }
-    }
+    height: 2rem;
+    cursor: pointer;
   }
 }

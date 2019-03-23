@@ -4,7 +4,7 @@
   grid-gap: 3rem;
   height: 100rem;
 
-  @include media("<desktop", ">mobile") {
+  @include media('<desktop', '>500px') {
     height: 200rem;
   }
 }
