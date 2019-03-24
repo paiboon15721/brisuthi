@@ -4,6 +4,14 @@
   align-items: center;
   flex-direction: column;
   transition: opacity 0.2s linear;
+  width: 25rem;
+
+  @include media('<tablet') {
+    width: 20rem;
+  }
+  @include media('<mobile') {
+    width: 15rem;
+  }
 
   &.transparent {
     opacity: 0;
