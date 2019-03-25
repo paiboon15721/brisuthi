@@ -1,6 +1,5 @@
 {
   "baseURL": "https://paiboon15721.github.io/brisuthi",
   "languageCode": "en-us",
-  "title": "Brisuthi",
-  "disableKinds": ["taxonomy", "taxonomyTerm"]
+  "title": "Brisuthi"
 }
