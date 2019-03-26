@@ -103,6 +103,10 @@
         border-bottom: 1.2px solid transparent;
         letter-spacing: 0.15rem;
 
+        &.sub-menu {
+          padding-left: 7rem;
+        }
+
         &:hover,
         &.active {
           border-bottom: 1.2px solid $primary;

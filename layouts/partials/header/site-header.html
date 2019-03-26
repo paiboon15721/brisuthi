@@ -8,7 +8,12 @@
       <ul id="menu">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-        <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+          <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ if eq .Name "Product" }}
+            {{ range $key, $taxonomy := $.Site.Taxonomies.categories }}
+              <li class="sub-menu">{{ $key }}</li>
+            {{ end }}
+          {{ end }}
         {{ end }}
       </ul>
     </div>
