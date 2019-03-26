@@ -8,17 +8,18 @@
     display: flex;
     justify-content: space-between;
 
-    @include media('<tablet') {
+    @include media('<desktop') {
       flex-flow: column nowrap;
     }
     img {
       margin-right: 3rem;
-      width: 100%;
+      width: 50%;
       height: 100%;
       object-fit: cover;
 
-      @include media('<tablet') {
+      @include media('<desktop') {
         margin: 0 0 3rem 0;
+        width: 100%;
       }
     }
 
