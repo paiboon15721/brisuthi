@@ -1,7 +1,7 @@
 {{ define "content" }}
 <div class="content-product-detail container">
   <div class="information">
-    {{ $image := .Resources.GetMatch "product.png" }}
+    {{ $image := .Resources.GetMatch "product.jpg" }}
     <img src="{{ $image.RelPermalink }}" alt="product" />
     <div class="detail">
       <h1>{{ .Title }}</h1>

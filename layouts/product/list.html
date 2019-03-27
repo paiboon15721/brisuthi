@@ -8,7 +8,7 @@
         <div class="swiper-wrapper">
           {{ range.Pages }}
           <div class="swiper-slide">
-            {{ $image := .Resources.GetMatch "product.png" }}
+            {{ $image := .Resources.GetMatch "product.jpg" }}
             <img src="{{ $image.RelPermalink }}" alt="" />
             <div class="caption">
               <h2>{{ .Title }}</h2>
