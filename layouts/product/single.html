@@ -2,8 +2,8 @@
 <div class="content-product-detail container">
   <div class="information">
     {{ $image := .Resources.GetMatch "product.jpg" }}
-    <img src="{{ $image.RelPermalink }}" alt="product" />
     <div class="detail">
+      <img src="{{ $image.RelPermalink }}" alt="product" />
       <h1>{{ .Title }}</h1>
       <div class="size-price">
         <p>size : {{ .Params.size | int | lang.NumFmt 0 }} ml.</p>

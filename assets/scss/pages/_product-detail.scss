@@ -21,14 +21,12 @@
     }
 
     img {
-      width: 48.2%;
+      width: 50%;
+      margin: 0 3rem 3rem 0;
+      float: left;
+      max-height: 50rem;
       object-fit: cover;
 
-      @include media('<tablet') {
-        width: 50%;
-        height: 50%;
-        margin-bottom: 4rem;
-      }
       @include media('<mobile') {
         width: 100%;
         height: 100%;
@@ -51,7 +49,6 @@
     }
 
     .detail {
-      width: 48.2%;
       @include media('<tablet') {
         width: 100%;
       }
