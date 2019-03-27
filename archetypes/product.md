@@ -1,6 +1,6 @@
 ---
 categories:
-  - Body
+  - Hair
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
