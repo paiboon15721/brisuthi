@@ -1,9 +1,12 @@
 {{ define "content" }}
 <div class="content-product-detail container">
   <div class="information">
-    {{ $image := (.Resources.GetMatch "product.jpg").Resize "1200x" }}
     <div class="detail">
-      <img src="{{ $image.RelPermalink }}" alt="product" />
+      {{ range first 1 (.Resources.ByType "image") }}
+        {{ $image := . }}
+        {{ $image := $image.Resize "1200x" }}
+        <img src="{{ $image.RelPermalink }}" alt="product" />
+      {{ end }}
       <div class="detail-container">
         <h1>{{ .Title }}</h1>
         <div class="size-price">
