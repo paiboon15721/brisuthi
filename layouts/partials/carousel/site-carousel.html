@@ -1,10 +1,8 @@
 <div class="swiper-container carousel">
   <div class="swiper-wrapper">
-    {{ range .Resources.Match "*-carousel.*" }}
-    <div
-      class="swiper-slide"
-      style="background-image:url({{.RelPermalink}})"
-    ></div>
+    {{ range . }}
+    {{ $url := (printf "img/%s" .) | relURL }}
+    <div class="swiper-slide" style="background-image:url({{$url}})"></div>
     {{ end }}
   </div>
 </div>
