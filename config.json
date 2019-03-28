@@ -1,5 +1,25 @@
 {
   "baseURL": "https://paiboon15721.github.io/brisuthi",
   "languageCode": "en-us",
-  "title": "Brisuthi"
+  "title": "Brisuthi",
+  "menu": {
+    "footer": [
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/brisuthi/"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/brisuthi.th/"
+      },
+      {
+        "name": "twitter",
+        "url": "https://www.facebook.com/brisuthi/"
+      },
+      {
+        "name": "line",
+        "url": "http://line.me/ti/p/@brisuthi"
+      }
+    ]
+  }
 }

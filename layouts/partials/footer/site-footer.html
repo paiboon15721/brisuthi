@@ -26,20 +26,11 @@
       </div>
     </div>
     <ul class="social-link">
-      <li>
-        <a href="https://www.facebook.com/brisuthi/" target="_blank"
-          >facebook</a
-        >
-      </li>
-      <li>
-        <a href="https://www.instagram.com/brisuthi.th/" target="_blank"
-          >instagram</a
-        >
-      </li>
-      <li><a href="#">twitter</a></li>
-      <li>
-        <a href="http://line.me/ti/p/@brisuthi" target="_blank">line</a>
-      </li>
+      {{ range.Site.Menus.footer }}
+        <li>
+          <a href="{{ .URL }}" target="_blank">{{ .Name }}</a>
+        </li>
+      {{ end }}
     </ul>
     <ul class="term-link">
       <li><a href="#">Contact us</a></li>
