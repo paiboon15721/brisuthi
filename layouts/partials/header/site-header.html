@@ -13,7 +13,7 @@
           </li>
           {{ if eq .Name "Product" }}
             {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
-                <li class="sub-menu">
+                <li class="sub-menu {{ if eq ($currentPage.Title | lower) $name }}active{{ end }}">
                   <a href="{{ printf `/categories/%s` ($name | urlize ) | relURL }}">{{ $name }}</a>
                 </li>
             {{ end }}
