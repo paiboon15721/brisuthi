@@ -1,10 +1,9 @@
 {{ define "content" }}
 {{ partial "carousel/site-carousel.html" .Params.carousel }}
 <div class="content-product">
-  {{ . }}
   <div class="collection">
     <div class="page-header">
-      <h1 class="title">brisuthi collection</h1>
+      <h1 class="title">brisuthi {{ .Title }} collection</h1>
       <div class="swiper-container product-list">
         <div class="swiper-wrapper">
           {{ range.Pages }}
