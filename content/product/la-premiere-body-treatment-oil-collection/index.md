@@ -7,6 +7,8 @@ draft: false
 direction: For best results, apply on damp skin and massage over the entire body.
 ---
 
+Indulge the scent of freshness, Our Mediterranean Hyssop oil has anti bacterial benefit and remarkably helps acne-prone skin heal faster. It helps address undesirable ingrown hair and tighten pores, making skin smoother and softer. Combined with organic German blue chamomile, this fast-absorbing body treatment oil soothes and clams skin without greasiness. Skin stay soft and revived. Suitable for all skin types.
+
 ## Mediterranean hyssop body treatment oil:
 
 <div class="size-price">
@@ -17,7 +19,6 @@ direction: For best results, apply on damp skin and massage over the entire body
 Indulge the scent of freshness, Our Mediterranean Hyssop oil has anti bacterial benefit and remarkably helps acne-prone skin heal faster. It helps address undesirable ingrown hair and tighten pores, making skin smoother and softer. Combined with organic German blue chamomile, this fast-absorbing body treatment oil soothes and clams skin without greasiness. Skin stay soft and revived. Suitable for all skin types.
 <br>
 **Main Ingredients:** Safflower oil, Camellia seed oil, Hyssop oil, German blue chamomile \*Organically-harvested
-<br><br>
 
 ## Egyptian myrrh body treatment oil:
 
@@ -29,7 +30,6 @@ Indulge the scent of freshness, Our Mediterranean Hyssop oil has anti bacterial 
 Formulated with organic Egyptian Myrrh oil and organic Pumpkin seed oil which provide a great source of anti-oxidants, vitamin A, C, E and nutrients, this Anti-aging oil helps promote youthful skin while deeply moisturizing and making skin noticeably toned and luminous. Day after day, uneven skin tone, age spots and fine lines are obviously diminished.
 <br>
 **Main Ingredients:** Pumpkin seed oil, Camellia seed oil, Sweet Almond oil, Myrrh oil, \*Organically-harvested
-<br><br>
 
 ## Rose noir body treatment oil:
 
@@ -41,7 +41,6 @@ Formulated with organic Egyptian Myrrh oil and organic Pumpkin seed oil which pr
 Exclusively blended with 3 types of rose : Bulgarian, Turkish and Moroccan rose oils, refreshing Blue German Chamomile, deeply woody scented Cedarwood, Frankincense and Amber oil, our Rose noir body treatment oil has a uniquely sophisticated scent. With global anti-aging properties, Rosehip and Guava seed oil helps regenerate skin and promotes skin renewal. It prevents all signs of aging while repairing problematic skin, leaving skin perfectly hydrated, firm and youthfully radiant.
 <br>
 **Main Ingredients:** Safflower oil, Rosehip oil, Guava seed oil, Sea buckthorn oil \*Organically-harvested
-<br><br>
 
 ## Rose de mai body treatment oil:
 
@@ -53,7 +52,6 @@ Exclusively blended with 3 types of rose : Bulgarian, Turkish and Moroccan rose 
 Formulated with sea buckthorn which contains high antioxidants and vitamin C, This oil is perfect for blemished and uneven skin-tone while Vitamin A rich Rosehip oil helps retexturize and rejuvenate skin by stimulating collagen production. Skin become more even and glowing.
 <br>
 **Main Ingredients:** Camellia seed oil, Rosehip oil, Rose de mai essential oil \*Organically-harvested
-<br><br>
 
 ## Neroli infused body treatment oil:
 
@@ -65,7 +63,6 @@ Formulated with sea buckthorn which contains high antioxidants and vitamin C, Th
 This Aloe vera barbadensis oil-based treatment is safe for pregnancy and helps reduce stretch marks and provides long-lasting moisture, leaving skin supple and comfortable. Infused with Tunisian Neroli oil, the oil has rejuvenating and regenerating benefits for every skin type, its antibacterial, antiinflammatory and antiseptic properties make it ideal for oily and blemished skin.
 <br>
 **Main Ingredients:** Aloe vara oil, Neroli essential oil, Lavender essential oil \*Organically-harvested
-<br><br>
 
 ## Manoi de tahiti body treatment oil:
 
@@ -77,7 +74,6 @@ This Aloe vera barbadensis oil-based treatment is safe for pregnancy and helps r
 Manoi de tahiti, The tahitian beauty secret is rich in essential fatty acids, vitamin E and free radical-fighting antioxidants -- makes for strong skin-moisturizing ability, the tiare flowers used to create the oil contain methyl salicylate, lending it anti-inflammatory properties. After 4 weeks,, Monoi bolsters skin elasticity by about 27 percent. In addition to moisturizing and soothing the skin, this versatile oil can be used to nourish your hair. Bolsters shine and decreases frizz.
 <br>
 **Main Ingredients:** Coconut oil, Polynesian Tiare (Gardenia) flowers
-<br><br>
 
 ## Scents of Mediterranean:
 
