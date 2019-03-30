@@ -18,13 +18,7 @@
     </div>
   </div>
   <div class="footer-link">
-    <div class="newsletter">
-      <h2>brisuthi newsletter</h2>
-      <div class="newsletter-input">
-        <input type="text" placeholder="Your email address*" />
-        <a href="#">OK</a>
-      </div>
-    </div>
+    {{ partial "footer/site-newsletter.html" . }}
     <ul class="social-link">
       {{ range.Site.Menus.footer }}
         <li>
