@@ -10,26 +10,18 @@
       <div class="detail-container">
         <h1>{{ .Title }}</h1>
         <div class="size-price">
-          <p>size : {{ .Params.size | int | lang.NumFmt 0 }} ml.</p>
+          <p>size : {{ .Params.size | float }} ml.</p>
           <p>price : {{ .Params.price | int | lang.NumFmt 0 }} baht</p>
         </div>
         <div class="content">
           <p>{{ .Content }}</p>
         </div>
-        <div class="ingredients">
-          <h2>main ingredients</h2>
-          <ul>
-            {{ range.Params.ingredients }}
-              <li>{{ . }}</li>
-            {{ end }}
-          </ul>
-        </div>
       </div>
     </div>
-    <div class="benefit">
-      <h2>benefits</h2>
+    <div class="ingredients">
+      <h2>main ingredients</h2>
       <ul>
-        {{ range.Params.benefits }}
+        {{ range.Params.ingredients }}
           <li>{{ . }}</li>
         {{ end }}
       </ul>
@@ -50,7 +42,7 @@
 <script>
   sr.reveal('.content-product-detail .information .detail img', fadeLeft)
   sr.reveal('.content-product-detail .information .detail .detail-container', fadeRight)
-  sr.reveal('.content-product-detail .benefit', fadeLeft)
+  sr.reveal('.content-product-detail .ingredients', fadeLeft)
   sr.reveal('.content-product-detail .direction', fadeRight)
   sr.reveal('.content-product-detail .banner', fadeBottom)
 </script>

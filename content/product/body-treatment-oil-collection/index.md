@@ -6,7 +6,7 @@ date: 2019-03-27T13:20:04+07:00
 draft: false
 size: 50
 price: 1500
-Direction: ''
+direction: ''
 ingredients: []
 Benefits: []
 ---

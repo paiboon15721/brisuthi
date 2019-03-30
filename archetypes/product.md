@@ -6,7 +6,6 @@ date: {{ .Date }}
 draft: false
 size: 50
 price: 1500
-Direction: ''
+direction: ''
 ingredients: []
-Benefits: []
 ---

@@ -4,11 +4,20 @@ categories:
 title: 'La Premiere Body Wash Collection'
 date: 2019-03-27T13:50:56+07:00
 draft: false
-size: 50
-price: 1500
-Direction: ''
-ingredients: []
-Benefits: []
+size: 200
+price: 990
+direction: 'Lather in the bath or shower. Rinse well.'
+ingredients: [
+    Organic Rose water,
+    Organic Aloe leaf juice,
+    Cactus Extract,
+    Shea butter extract
+    Chamomile extract,
+    Cocamidopropyl Betaine,
+    Decyl Glucoside,
+    PEG-150 Pentaerythrityl
+    Tetrastearate,
+  ]
 ---
 
 **La Première:** Gently cleanse with this fragrance-Free and pH balanced body wash, formulated with organic Rose petal water and a unique blend of organic ingredients. Soap free, sulfate free and non-drying to cleanse and comfort the most delicate of skin. Skin stays hydrated, smooth and revived. Suitable for all skin types, especially sensitive skin or even Eczema.
