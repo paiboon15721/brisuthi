@@ -10,14 +10,19 @@
       <div class="detail-container">
         <h1>{{ .Title }}</h1>
         <div class="size-price">
+          {{ if .Params.size }}
           <p>size : {{ .Params.size | float }} ml.</p>
+          {{ end }}
+          {{ if .Params.price }}
           <p>price : {{ .Params.price | int | lang.NumFmt 0 }} baht</p>
+          {{ end }}
         </div>
         <div class="content">
           <p>{{ .Content }}</p>
         </div>
       </div>
     </div>
+    {{ if .Params.ingredients }}
     <div class="ingredients">
       <h2>main ingredients</h2>
       <ul>
@@ -26,10 +31,13 @@
         {{ end }}
       </ul>
     </div>
+    {{ end }}
+    {{ if .Params.direction }}
     <div class="direction">
       <h2>direction</h2>
       <p>{{ .Params.direction }}</p>
     </div>
+    {{ end }}
   </div>
   <img
     class="banner"
