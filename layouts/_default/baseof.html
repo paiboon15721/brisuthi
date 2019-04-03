@@ -17,7 +17,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
     />
     {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
     <title>BRISUTHI</title>
   </head>
   <body>
