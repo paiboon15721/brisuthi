@@ -10,6 +10,10 @@
     height: 40rem;
   }
 
+  @include media('<mobile') {
+    height: 30rem;
+  }
+
   .swiper-slide {
     background-position: center;
     background-size: cover;

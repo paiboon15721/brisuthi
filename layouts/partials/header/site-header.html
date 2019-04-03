@@ -2,9 +2,11 @@
   <nav class="navigation" role="navigation">
     <div id="menuToggle">
       <input type="checkbox" />
-      <span></span>
-      <span></span>
-      <span></span>
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul id="menu">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}

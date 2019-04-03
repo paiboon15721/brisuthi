@@ -44,11 +44,13 @@
     span {
       display: block;
       width: 25px;
-      height: 1.2px;
+      height: 1px;
       position: relative;
       background: $primary;
       border-radius: 3px;
-      margin-bottom: 6px;
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
 
       z-index: 1;
 
@@ -84,13 +86,17 @@
       transform: translate(-100%, 0);
       transition: transform 0.7s cubic-bezier(0.77, 0.2, 0.05, 1);
 
+      @include media('<desktop') {
+        width: 45vw;
+      }
+
+      @include media('<desktop-medium') {
+        width: 35vw;
+      }
+
       @include media('<mobile') {
         margin: -53px 0 0 -40px;
         width: 60vw;
-      }
-
-      @include media('<desktop', '>mobile') {
-        width: 45vw;
       }
 
       li {
@@ -102,14 +108,17 @@
         padding-bottom: 5px;
         border-bottom: 1.2px solid transparent;
         letter-spacing: 0.15rem;
+        font-weight: 200;
 
         &.sub-menu {
-          padding-left: 7rem;
+          // font-size: 1.5rem;
+          // padding-left: 7rem;
         }
 
         &:hover,
         &.active {
-          border-bottom: 1.2px solid $primary;
+          // border-bottom: 1.2px solid $primary;
+          font-weight: bold;
         }
 
         a {

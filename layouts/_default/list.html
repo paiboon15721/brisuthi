@@ -38,6 +38,7 @@
       </div>
     </div>
   </div>
+  {{ if eq .Page.Title "Product" }}
   <div class="quote-container container">
     <img src="{{ `img/product/quote/quote-banner.png` | relURL }}" alt="quote" />
     <div class="quote">
@@ -48,6 +49,7 @@
       <h3>beauty</h3>
     </div>
   </div>
+  {{ end }}
 </div>
 {{ end }}
 {{ define "javascript" }}
