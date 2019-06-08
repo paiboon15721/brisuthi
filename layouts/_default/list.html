@@ -1,5 +1,4 @@
 {{ define "content" }}
-{{ partial "carousel/site-carousel.html" .Params.carousel }}
 <div class="content-product">
   <div class="collection">
     <div class="page-header">
@@ -9,19 +8,20 @@
           {{ range.Pages }}
           <div class="swiper-slide">
             {{ range first 1 (.Resources.ByType "image") }}
-              {{ $image := . }}
-              {{ $image := $image.Resize "600x" }}
-              <img src="{{ $image.RelPermalink }}" alt="product" />
+            {{ $image := . }}
+            {{ $image := $image.Resize "600x" }}
+            <img src="{{ $image.RelPermalink }}" alt="product" />
             {{ end }}
             <div class="caption">
               <h2>{{ .Title }}</h2>
               <p>{{ .Content | truncate 120 }}</p>
-              <a href="{{.Permalink}}"
-                >VIEW<span
+              <a href="{{.Permalink}}">
+                VIEW
+                <span
                   class="icon"
                   style="background:url({{`img/icon/right-arrow.svg`|relURL}}) no-repeat;"
-                ></span
-              ></a>
+                ></span>
+              </a>
             </div>
           </div>
           {{ end }}
@@ -40,7 +40,10 @@
   </div>
   {{ if eq .Page.Title "Product" }}
   <div class="quote-container container">
-    <img src="{{ `img/product/quote/quote-banner.png` | relURL }}" alt="quote" />
+    <img
+      src="{{ `img/product/quote/quote-banner.png` | relURL }}"
+      alt="quote"
+    />
     <div class="quote">
       <h2>simplicity<br />of<br />nature</h2>
       <hr />
@@ -53,7 +56,6 @@
 </div>
 {{ end }}
 {{ define "javascript" }}
-{{ partial "carousel/scripts.html" }}
 <script>
   new Swiper('.product-list', {
     slidesPerView: 3,
