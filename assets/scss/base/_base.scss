@@ -57,3 +57,7 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+@mixin debug {
+  border: 1px solid red;
+}

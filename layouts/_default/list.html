@@ -1,40 +1,37 @@
 {{ define "content" }}
 <div class="content-product">
-  {{ $currentPage := . }}
-  {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
-  <li class="sub-menu {{ if eq ($currentPage.Title | lower) $name }}active{{ end }}">
-    <a href="{{ printf `/categories/%s` ($name | urlize ) | relURL }}">
-      {{ $name }}
-    </a>
-  </li>
-  {{ end }}
-  <div class="collection">
-    <div class="page-header">
-      <h1 class="title">brisuthi {{ .Title }} collection</h1>
-      <div class="swiper-container product-list">
-        <div class="swiper-wrapper">
-          {{ range.Pages }}
-          <div class="swiper-slide">
-            {{ range first 1 (.Resources.ByType "image") }}
-            {{ $image := . }}
-            {{ $image := $image.Resize "600x" }}
-            <img src="{{ $image.RelPermalink }}" alt="product" />
-            {{ end }}
-            <div class="caption">
-              <h2>{{ .Title }}</h2>
-              <p>{{ .Content | truncate 120 }}</p>
-              <a href="{{.Permalink}}">
-                VIEW
-                <span
-                  class="icon"
-                  style="background:url({{`img/icon/right-arrow.svg`|relURL}}) no-repeat;"
-                ></span>
-              </a>
-            </div>
-          </div>
-          {{ end }}
+  <div class="page-header">
+    {{ $currentPage := . }}
+    <ul class="filter-menu">
+      {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+      <li class="{{ if eq ($currentPage.Title | lower) $name }}active{{ end }}">
+        <a href="{{ printf `/categories/%s` ($name | urlize ) | relURL }}">
+          {{ $name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+    <div class="product-list">
+      {{ range.Pages }}
+      <div class="product-item">
+        {{ range first 1 (.Resources.ByType "image") }}
+        {{ $image := . }}
+        {{ $image := $image.Resize "600x" }}
+        <img src="{{ $image.RelPermalink }}" alt="product" />
+        {{ end }}
+        <div class="caption">
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Content | truncate 120 }}</p>
+          <a href="{{.Permalink}}">
+            VIEW
+            <span
+              class="icon"
+              style="background:url({{`img/icon/right-arrow.svg`|relURL}}) no-repeat;"
+            ></span>
+          </a>
         </div>
       </div>
+      {{ end }}
     </div>
   </div>
   <div class="quote-container container">
