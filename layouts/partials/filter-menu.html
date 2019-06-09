@@ -1,0 +1,10 @@
+{{ $currentPage := . }}
+<ul class="filter-menu">
+  {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+  <li class="{{ if eq ($currentPage.Title | lower) $name }}active{{ end }}">
+    <a href="{{ printf `/categories/%s` ($name | urlize ) | relURL }}">
+      {{ $name }}
+    </a>
+  </li>
+  {{ end }}
+</ul>

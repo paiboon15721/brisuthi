@@ -1,9 +1,10 @@
 {{ $category := .Title | lower }}
+{{ $c1Num := .Params.c1Num }}
 <div class="{{ $category }}-gallery">
   {{ $size := "400x"}}
   {{ $baseURL := $category | printf "img/new/%s" }}
   <ul class="c1">
-    {{ range $index, $num := (seq 4) }}
+    {{ range $index, $num := (seq $c1Num) }}
     <li>
       {{ $image := resources.Get (printf "%s/%d.jpg" $baseURL $num) }}
       {{ $image := $image.Resize $size }}
@@ -12,9 +13,9 @@
     {{ end }}
   </ul>
   <ul class="c2">
-    {{ range $index, $num := (seq 4) }}
+    {{ range $index, $num := (seq .Params.c2Num) }}
     <li>
-      {{ $image := resources.Get (printf "%s/%d.jpg" $baseURL (add $num 4)) }}
+      {{ $image := resources.Get (printf "%s/%d.jpg" $baseURL (add $num $c1Num)) }}
       {{ $image := $image.Resize $size }}
       <img src="{{ $image.RelPermalink }}" />
     </li>
