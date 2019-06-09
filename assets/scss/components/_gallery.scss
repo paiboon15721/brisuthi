@@ -11,12 +11,21 @@
     @include media('<tablet') {
       width: 100%;
     }
+  }
 
-    .c1 {
-      @include media('<tablet') {
-        margin-top: 5rem;
-      }
-      text-align: right;
+  .c1 {
+    @include media('<tablet') {
+      margin-top: 5rem;
     }
   }
+
+  .c2 {
+    text-align: right;
+  }
+}
+
+.gallery,
+.c1,
+.c2 {
+  @include debug;
 }
