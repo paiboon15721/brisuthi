@@ -1,6 +1,6 @@
 {{ $category := .Title | lower }}
 {{ $c1Num := .Params.c1Num }}
-<div class="{{ $category }}-gallery">
+<div class="gallery {{ $category }}-gallery">
   {{ $size := "400x"}}
   {{ $baseURL := $category | printf "img/new/%s" }}
   <ul class="c1">

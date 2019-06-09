@@ -1,0 +1,22 @@
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  @include media('<tablet') {
+    flex-flow: column nowrap;
+  }
+
+  ul {
+    width: 50%;
+    @include media('<tablet') {
+      width: 100%;
+    }
+
+    .c1 {
+      @include media('<tablet') {
+        margin-top: 5rem;
+      }
+      text-align: right;
+    }
+  }
+}
