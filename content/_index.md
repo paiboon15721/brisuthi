@@ -1,12 +1,10 @@
 ---
-title: "Home"
+title: 'Home'
 date: 2019-03-17T18:09:59+07:00
 draft: false
-carousel:
-  - "index/carousel/01.png"
-  - "index/carousel/02.png"
-menu: 
+c1Num: 7
+c2Num: 7
+menu:
   main:
     weight: 10
 ---
-
