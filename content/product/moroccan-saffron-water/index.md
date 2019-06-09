@@ -1,6 +1,8 @@
 ---
 categories:
   - Facial
+tags:
+  - Cleanse
 title: 'Moroccan Saffron Water'
 date: 2019-03-27T12:40:51+07:00
 draft: false

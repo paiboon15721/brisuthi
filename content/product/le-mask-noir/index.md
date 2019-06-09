@@ -1,6 +1,8 @@
 ---
 categories:
   - Facial
+tags:
+  - Mask
 title: 'Le Mask Noir'
 date: 2019-03-27T13:14:33+07:00
 draft: false

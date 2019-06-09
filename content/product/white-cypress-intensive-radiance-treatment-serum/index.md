@@ -1,6 +1,8 @@
 ---
 categories:
   - Facial
+tags:
+  - Treat
 title: 'White Cypress Intensive Radiance Treatment Serum'
 date: 2019-03-27T13:01:20+07:00
 draft: false

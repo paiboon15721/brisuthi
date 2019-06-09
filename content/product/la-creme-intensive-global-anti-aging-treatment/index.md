@@ -1,6 +1,8 @@
 ---
 categories:
   - Facial
+tags:
+  - Moisture
 title: 'La Creme Intensive Global Anti Aging Treatment'
 date: 2019-03-27T13:12:12+07:00
 draft: false

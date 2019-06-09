@@ -1,6 +1,8 @@
 ---
 categories:
   - Facial
+tags:
+  - Treat
 title: 'Aboriginal Citrus Concentrate'
 date: 2019-03-27T13:03:45+07:00
 draft: false

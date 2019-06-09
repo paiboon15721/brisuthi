@@ -1,6 +1,8 @@
 ---
 categories:
   - Facial
+tags:
+  - Moisture
 title: 'Balloon Vine Intensive Repair Treatment'
 date: 2019-03-27T13:08:25+07:00
 draft: false

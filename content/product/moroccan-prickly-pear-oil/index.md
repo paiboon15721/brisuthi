@@ -1,6 +1,8 @@
 ---
 categories:
   - Facial
+tags:
+  - Treat
 title: 'Moroccan Prickly Pear Oil'
 date: 2019-03-27T12:44:51+07:00
 draft: false

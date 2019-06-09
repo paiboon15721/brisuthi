@@ -1,6 +1,8 @@
 ---
 categories:
   - Facial
+tags:
+  - Cleanse
 title: 'French Geranium Foaming Cleanser'
 date: 2019-03-18T19:41:31+07:00
 draft: false
