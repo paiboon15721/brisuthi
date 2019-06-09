@@ -8,7 +8,14 @@
     {{ end }}
     <div class="caption">
       <h2>{{ .Title }}</h2>
-      <h3>{{ if .Params.Tags }} {{ delimit .Params.tags ", " }} {{ end }}</h3>
+      {{ if .Params.Tags }}
+      {{ $tag := (index .Params.Tags 0)}}
+      <h3>
+        <a href="{{ printf `/tags/%s` ($tag | urlize ) | relURL }}">
+          {{ $tag }}
+        </a>
+      </h3>
+      {{ end }}
       <p>{{ .Content | truncate 120 }}</p>
       <a href="{{.Permalink}}">
         VIEW
