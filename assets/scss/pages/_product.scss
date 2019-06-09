@@ -27,6 +27,11 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    margin: 0 10rem;
+
+    @include media('<desktop') {
+      margin: 0;
+    }
 
     .product-item {
       width: 33%;
