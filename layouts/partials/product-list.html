@@ -8,6 +8,7 @@
     {{ end }}
     <div class="caption">
       <h2>{{ .Title }}</h2>
+      <h3>{{ if .Params.Tags }} {{ delimit .Params.tags ", " }} {{ end }}</h3>
       <p>{{ .Content | truncate 120 }}</p>
       <a href="{{.Permalink}}">
         VIEW
