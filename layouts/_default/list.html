@@ -1,29 +1,8 @@
 {{ define "content" }}
 <div class="content-product">
   {{ partial "gallery.html" . }}
-  {{ partial "filter-menu.html" . }}
-  <div class="product-list">
-    {{ range.Pages }}
-    <div class="product-item">
-      {{ range first 1 (.Resources.ByType "image") }}
-      {{ $image := . }}
-      {{ $image := $image.Resize "600x" }}
-      <img src="{{ $image.RelPermalink }}" alt="product" />
-      {{ end }}
-      <div class="caption">
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Content | truncate 120 }}</p>
-        <a href="{{.Permalink}}">
-          VIEW
-          <span
-            class="icon"
-            style="background:url({{`img/icon/right-arrow.svg`|relURL}}) no-repeat;"
-          ></span>
-        </a>
-      </div>
-    </div>
-    {{ end }}
-  </div>
+  {{ partial "categories-menu.html" . }}
+  {{ partial "product-list.html" . }}
   <div class="quote-container container">
     <img
       src="{{ `img/product/quote/quote-banner.png` | relURL }}"
