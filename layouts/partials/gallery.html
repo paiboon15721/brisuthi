@@ -1,0 +1,23 @@
+{{ $category := .Title | lower }}
+<div class="{{ $category }}-gallery">
+  {{ $size := "400x"}}
+  {{ $baseURL := $category | printf "img/new/%s" }}
+  <ul class="c1">
+    {{ range $index, $num := (seq 4) }}
+    <li>
+      {{ $image := resources.Get (printf "%s/%d.jpg" $baseURL $num) }}
+      {{ $image := $image.Resize $size }}
+      <img src="{{ $image.RelPermalink }}" />
+    </li>
+    {{ end }}
+  </ul>
+  <ul class="c2">
+    {{ range $index, $num := (seq 4) }}
+    <li>
+      {{ $image := resources.Get (printf "%s/%d.jpg" $baseURL (add $num 4)) }}
+      {{ $image := $image.Resize $size }}
+      <img src="{{ $image.RelPermalink }}" />
+    </li>
+    {{ end }}
+  </ul>
+</div>

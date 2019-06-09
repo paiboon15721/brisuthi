@@ -1,26 +1,6 @@
 {{ define "content" }}
 <div class="content-product">
-  <div class="facial-gallery">
-    {{ $size := "400x"}}
-    <ul class="c1">
-      {{ range $index, $num := (seq 4) }}
-      <li>
-        {{ $image := resources.Get (printf "img/new/facial/%d.jpg" $num) }}
-        {{ $image := $image.Resize $size }}
-        <img src="{{ $image.RelPermalink }}" />
-      </li>
-      {{ end }}
-    </ul>
-    <ul class="c2">
-      {{ range $index, $num := (seq 4) }}
-      <li>
-        {{ $image := resources.Get (printf "img/new/facial/%d.jpg" (add $num 4)) }}
-        {{ $image := $image.Resize $size }}
-        <img src="{{ $image.RelPermalink }}" />
-      </li>
-      {{ end }}
-    </ul>
-  </div>
+  {{ partial "gallery.html" . }}
   {{ $currentPage := . }}
   <ul class="filter-menu">
     {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
