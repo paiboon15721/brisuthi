@@ -1,11 +1,24 @@
 {{ define "content" }}
 <div class="content-product">
-  {{ $image := resources.Get "img/new/facial/1.jpg" }}
-        {{ $image := $image.Resize "200x" }}
-        <img src="{{ $image.RelPermalink }}" alt="product" />
   <div class="facial-gallery">
-    <ul>
-      <li><img src="{{ `img/new/facial/1.jpg` | relURL }}" /></li>
+    {{ $size := "400x"}}
+    <ul class="c1">
+      {{ range $index, $num := (seq 4) }}
+      <li>
+        {{ $image := resources.Get (printf "img/new/facial/%d.jpg" $num) }}
+        {{ $image := $image.Resize $size }}
+        <img src="{{ $image.RelPermalink }}" />
+      </li>
+      {{ end }}
+    </ul>
+    <ul class="c2">
+      {{ range $index, $num := (seq 4) }}
+      <li>
+        {{ $image := resources.Get (printf "img/new/facial/%d.jpg" (add $num 4)) }}
+        {{ $image := $image.Resize $size }}
+        <img src="{{ $image.RelPermalink }}" />
+      </li>
+      {{ end }}
     </ul>
   </div>
   {{ $currentPage := . }}

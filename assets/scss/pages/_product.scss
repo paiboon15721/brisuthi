@@ -1,10 +1,13 @@
 .content-product {
+  @include media('<desktop') {
+    margin: 0;
+  }
   .filter-menu {
     display: flex;
     justify-content: space-around;
     font-size: 2.5rem;
     text-transform: uppercase;
-    margin: 5rem 20rem;
+    margin: 5rem 10rem;
     @include media('<tablet') {
       margin: 5rem 10rem;
       font-size: 2.2rem;
@@ -24,15 +27,11 @@
   }
 
   .product-list {
+    margin: 0 10rem;
     display: flex;
     text-align: center;
     flex-flow: row wrap;
     justify-content: space-around;
-    margin: 0 10rem;
-
-    @include media('<desktop') {
-      margin: 0;
-    }
 
     .product-item {
       width: 33%;
