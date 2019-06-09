@@ -1,6 +1,6 @@
 {{ define "content" }}
 <div class="content-index container">
-  <ul class="section-1 gallery-list">
+  <ul>
     <li>
       <figure>
         <img src="{{ `img/index/4-4-section/image-1.png` | relURL }}" alt="" />
@@ -22,113 +22,5 @@
       </figure>
     </li>
   </ul>
-
-  <figure class="section-2">
-    <img src="{{ `img/index/2nd-banner/2nd-banner.png` | relURL }}" alt="" />
-  </figure>
-
-  <ul class="section-3 gallery-list">
-    <li>
-      <figure>
-        <img src="{{ `img/index/product-1/01.png` | relURL }}" alt="" />
-      </figure>
-    </li>
-    <li>
-      <figure class="hover-container">
-        <div class="overlay"></div>
-        <img src="{{ `img/index/product-1/02.png` | relURL }}" alt="" />
-        <figcaption class="hover-text">
-          <h2>baobab oil</h2>
-          <hr />
-          <p>
-            Known as The tree of life, African Baobab Superfruitis an
-            extraordinary source of antioxidants and minerals
-          </p>
-        </figcaption>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="{{ `img/index/product-1/03.png` | relURL }}" alt="" />
-        <figcaption>
-          <p>baobab oil</p>
-          <p>view</p>
-        </figcaption>
-      </figure>
-    </li>
-  </ul>
-
-  <ul class="section-4 gallery-list">
-    <li>
-      <figure>
-        <img src="{{ `img/index/product-2/01.png` | relURL }}" alt="" />
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="{{ `img/index/product-2/02.png` | relURL }}" alt="" />
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="{{ `img/index/product-2/03.jpg` | relURL }}" alt="" />
-        <figcaption>
-          <p>prickly peay seed oil</p>
-          <p>view</p>
-        </figcaption>
-      </figure>
-    </li>
-    <li>
-      <h2>prickly pear seed oil</h2>
-      <hr />
-      <p>
-        the heritage of morocco prickly pear seed oil, one of the most expensive
-        oils in the world contains almost 150% more vitamin e than argan oil
-      </p>
-    </li>
-  </ul>
-
-  <ul class="section-5 gallery-list">
-    <li>
-      <p>
-        ungurahua Oil is the richest natural source of beta-carotene (Vitamin A)
-      </p>
-    </li>
-    <li>
-      <figure>
-        <img src="{{ `img/index/product-3/02.png` | relURL }}" alt="" />
-        <figcaption>
-          <p>ungurahua oil</p>
-          <p>view</p>
-        </figcaption>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="{{ `img/index/product-3/01.png` | relURL }}" alt="" />
-      </figure>
-    </li>
-  </ul>
 </div>
-{{ end }}
-{{ define "javascript" }}
-{{ partial "carousel/scripts.html" }}
-<script>
-  sr.reveal('.section-1 > li:nth-child(1)', fadeLeft)
-  sr.reveal('.section-1 > li:nth-child(2)', fadeBottom)
-  sr.reveal('.section-1 > li:nth-child(3)', fadeBottom)
-  sr.reveal('.section-1 > li:nth-child(4)', fadeRight)
-  sr.reveal('.section-2', fadeBottom)
-  sr.reveal('.section-3 > li:nth-child(1)', fadeLeft)
-  sr.reveal('.section-3 > li:nth-child(2)', fadeBottom)
-  sr.reveal('.section-3 > li:nth-child(3)', fadeBottom)
-  sr.reveal('.section-4 > li:nth-child(1)', fadeLeft)
-  sr.reveal('.section-4 > li:nth-child(2)', fadeBottom)
-  sr.reveal('.section-4 > li:nth-child(3)', fadeBottom)
-  sr.reveal('.section-4 > li:nth-child(4)', fadeRight)
-  sr.reveal('.section-5 > li:nth-child(1)', fadeLeft)
-  sr.reveal('.section-5 > li:nth-child(2)', fadeBottom)
-  sr.reveal('.section-5 > li:nth-child(3)', fadeBottom)
-  sr.reveal('.section-5 > li:nth-child(4)', fadeRight)
-</script>
 {{ end }}
