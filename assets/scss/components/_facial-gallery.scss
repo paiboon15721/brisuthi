@@ -3,29 +3,41 @@
     li {
       &:nth-child(1) {
         img {
-          margin: 5rem 0 7rem 20rem;
+          margin: 5rem 0 7rem 30%;
           width: 30%;
+          @include media('<tablet') {
+            margin: 5rem 0 5rem 20%;
+          }
         }
       }
 
       &:nth-child(2) {
         img {
-          margin: 0 0 5rem 30rem;
+          margin: 0 0 5rem 40%;
           width: 40%;
+          @include media('<tablet') {
+            margin: 0 0 5rem 30%;
+          }
         }
       }
 
       &:nth-child(3) {
         img {
-          margin: 0 0 10rem 15rem;
+          margin: 0 0 10rem 25%;
           width: 40%;
+          @include media('<tablet') {
+            margin: 0 0 5rem 15%;
+          }
         }
       }
 
       &:nth-child(4) {
         img {
-          margin: 0 0 0 25rem;
+          margin: 0 0 0 35%;
           width: 40%;
+          @include media('<tablet') {
+            margin: 0 0 0 35%;
+          }
         }
       }
     }
@@ -35,15 +47,21 @@
     li {
       &:nth-child(1) {
         img {
-          margin: 3rem 15rem 10rem 0;
+          margin: 3rem 15% 10rem 0;
           width: 60%;
+          @include media('<tablet') {
+            margin: 0 15% 5rem 0;
+          }
         }
       }
 
       &:nth-child(2) {
         img {
-          margin: 0 18rem 7rem 0;
+          margin: 0 18% 7rem 0;
           width: 40%;
+          @include media('<tablet') {
+            margin: 0 18% 5rem 0;
+          }
         }
       }
 
@@ -53,13 +71,19 @@
           object-fit: none;
           width: 100%;
           height: 30rem;
+          @include media('<tablet') {
+            margin: 0 0 5rem 0;
+          }
         }
       }
 
       &:nth-child(4) {
         img {
-          margin: 0 25rem 0 0;
+          margin: 0 25% 0 0;
           width: 40%;
+          @include media('<tablet') {
+          margin: 0 25% 0 0;
+          }
         }
       }
     }

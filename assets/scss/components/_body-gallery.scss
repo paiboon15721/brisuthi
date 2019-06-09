@@ -3,22 +3,31 @@
     li {
       &:nth-child(1) {
         img {
-          margin: 5rem 0 10rem 20rem;
+          margin: 5rem 0 10rem 40%;
           width: 60%;
+          @include media('<tablet') {
+            margin: 0 0 5rem 20%;
+          }
         }
       }
 
       &:nth-child(2) {
         img {
-          margin: 0 0 7rem 10rem;
+          margin: 0 0 7rem 15%;
           width: 30%;
+          @include media('<tablet') {
+            margin: 0 0 5rem 15%;
+          }
         }
       }
 
       &:nth-child(3) {
         img {
-          margin: 0 0 10rem 25rem;
+          margin: 0 0 10rem 45%;
           width: 40%;
+          @include media('<tablet') {
+            margin: 0 0 0 35%;
+          }
         }
       }
     }
@@ -28,15 +37,21 @@
     li {
       &:nth-child(1) {
         img {
-          margin: 40rem 15rem 12rem 0;
+          margin: 40rem 25% 12rem 0;
           width: 60%;
+          @include media('<tablet') {
+            margin: 0 25% 5rem 0;
+          }
         }
       }
 
       &:nth-child(2) {
         img {
-          margin: 0 25rem 7rem 0;
+          margin: 0 45% 7rem 0;
           width: 40%;
+          @include media('<tablet') {
+            margin: 0 15% 5rem 0;
+          }
         }
       }
     }
