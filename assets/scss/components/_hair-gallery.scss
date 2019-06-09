@@ -3,15 +3,21 @@
     li {
       &:nth-child(1) {
         img {
-          margin: 5rem 0 15rem 20rem;
+          margin: 5rem 0 15rem 40%;
           width: 60%;
+          @include media('<tablet') {
+            margin: 5rem 0 5rem 30%;
+          }
         }
       }
 
       &:nth-child(2) {
         img {
-          margin: 0 0 5rem 20rem;
+          margin: 0 0 5rem 25%;
           width: 50%;
+          @include media('<tablet') {
+            margin: 0 0 0 25%;
+          }
         }
       }
     }
@@ -21,22 +27,32 @@
     li {
       &:nth-child(1) {
         img {
-          margin: 15rem 30rem 15rem 0;
+          margin: 15rem 30% 15rem 0;
           width: 35%;
+          @include media('<tablet') {
+            margin-top: 0rem;
+            margin-bottom: 5rem;
+          }
         }
       }
 
       &:nth-child(2) {
         img {
-          margin: 0 18rem 7rem 0;
+          margin: 0 18% 7rem 0;
           width: 40%;
+          @include media('<tablet') {
+            margin-bottom: 5rem;
+          }
         }
       }
 
       &:nth-child(3) {
         img {
-          margin: 0 40rem 0 0;
           width: 40%;
+          margin: 0 60% 0 0;
+          @include media('<tablet') {
+            margin: 0 40% 0 0;
+          }
         }
       }
     }

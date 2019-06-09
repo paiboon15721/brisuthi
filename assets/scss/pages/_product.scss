@@ -2,29 +2,6 @@
   @include media('<desktop') {
     margin: 0;
   }
-  .filter-menu {
-    display: flex;
-    justify-content: space-around;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin: 5rem 10rem;
-    @include media('<tablet') {
-      margin: 5rem 10rem;
-      font-size: 2.2rem;
-    }
-
-    @include media('<mobile') {
-      margin: 5rem 0;
-      font-size: 2rem;
-    }
-
-    li {
-      &:hover,
-      &.active {
-        font-weight: bold;
-      }
-    }
-  }
 
   .product-list {
     margin: 0 10rem;
@@ -32,6 +9,10 @@
     text-align: center;
     flex-flow: row wrap;
     justify-content: space-around;
+
+    @include media('<desktop') {
+      margin: 0;
+    }
 
     .product-item {
       width: 33%;
@@ -108,6 +89,7 @@
     }
 
     img {
+      @include debug;
       margin-top: 2rem;
       width: 50%;
       height: 100%;

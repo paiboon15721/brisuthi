@@ -1,0 +1,23 @@
+.filter-menu {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 5rem 10rem;
+  @include media('<tablet') {
+    margin: 5rem 10rem;
+    font-size: 2.2rem;
+  }
+
+  @include media('<mobile') {
+    margin: 5rem 0;
+    font-size: 2rem;
+  }
+
+  li {
+    &:hover,
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
