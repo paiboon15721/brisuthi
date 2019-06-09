@@ -1,9 +1,0 @@
-<div class="swiper-container carousel">
-  <div class="swiper-wrapper">
-    {{ range . }}
-    {{ $url := (printf "img/%s" .) | relURL }}
-    <div class="swiper-slide" style="background-image:url({{$url}})"></div>
-    {{ end }}
-  </div>
-</div>
-<div class="swiper-pagination carousel-pagination"></div>

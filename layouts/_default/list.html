@@ -1,7 +1,12 @@
 {{ define "content" }}
 <div class="content-product">
+  {{ $image := resources.Get "img/new/facial/1.jpg" }}
+        {{ $image := $image.Resize "200x" }}
+        <img src="{{ $image.RelPermalink }}" alt="product" />
   <div class="facial-gallery">
-    test
+    <ul>
+      <li><img src="{{ `img/new/facial/1.jpg` | relURL }}" /></li>
+    </ul>
   </div>
   {{ $currentPage := . }}
   <ul class="filter-menu">
