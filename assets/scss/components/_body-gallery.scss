@@ -13,10 +13,10 @@
 
       &:nth-child(2) {
         img {
-          margin: 0 0 7rem 15%;
+          margin: 0 0 7rem 30%;
           width: 30%;
           @include media('<tablet') {
-            margin: 0 0 5rem 15%;
+            margin: 0 0 5rem 30%;
           }
         }
       }
@@ -37,8 +37,8 @@
     li {
       &:nth-child(1) {
         img {
-          margin: 40rem 25% 12rem 0;
-          width: 60%;
+          margin: 40rem 35% 12rem 0;
+          width: 30%;
           @include media('<tablet') {
             margin: 0 25% 5rem 0;
           }

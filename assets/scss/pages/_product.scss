@@ -81,6 +81,7 @@
   }
 
   .quote-container {
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
 
@@ -98,6 +99,7 @@
       }
       @include media('<mobile') {
         width: 100%;
+        max-height: 35rem;
       }
     }
 
