@@ -18,7 +18,7 @@
     />
     {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-    <title>BRISUTHI</title>
+    <title>{{ .Site.Title }} - {{ .Title }}</title>
   </head>
   <body>
     {{ partial "header/site-header.html" . }}
