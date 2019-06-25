@@ -5,6 +5,6 @@ draft: false
 type: press
 menu: 
   main:
-    weight: 30
+    weight: 50
 ---
 

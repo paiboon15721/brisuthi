@@ -5,6 +5,6 @@ draft: false
 type: about-us
 menu: 
   main:
-    weight: 40
+    weight: 60
 ---
 

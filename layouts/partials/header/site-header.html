@@ -11,13 +11,6 @@
           <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
             <a href="{{ .URL }}">{{ .Name }}</a>
           </li>
-          {{ if eq .Name "Home" }}
-            {{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
-                <li class="sub-menu {{ if eq ($currentPage.Title | lower) $name }}active{{ end }}">
-                  <a href="{{ printf `/categories/%s` ($name | urlize ) | relURL }}">{{ $name }}</a>
-                </li>
-            {{ end }}
-          {{ end }}
         {{ end }}
       </ul>
     </div>
