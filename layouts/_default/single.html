@@ -3,9 +3,9 @@
   <div class="information">
     <div class="detail">
       {{ range first 1 (.Resources.ByType "image") }}
-        {{ $image := . }}
-        {{ $image := $image.Resize "1200x" }}
-        <img src="{{ $image.RelPermalink }}" alt="product" />
+      {{ $image := . }}
+      {{ $image := $image.Resize "1200x" }}
+      <img src="{{ $image.RelPermalink }}" alt="product" />
       {{ end }}
       <div class="detail-container">
         <h1>{{ .Title }}</h1>
@@ -27,7 +27,7 @@
       <h2>main ingredients</h2>
       <ul>
         {{ range.Params.ingredients }}
-          <li>{{ . }}</li>
+        <li>{{ . }}</li>
         {{ end }}
       </ul>
     </div>
@@ -39,6 +39,9 @@
     </div>
     {{ end }}
   </div>
+  <div class="share-buttons">
+    Share on: {{ partial "share-buttons" . }}
+  </div>
   <img
     class="banner"
     src="{{ `img/product/carousel/01.png` | relURL }}"
@@ -49,9 +52,13 @@
 {{ define "javascript" }}
 <script>
   sr.reveal('.content-product-detail .information .detail img', fadeLeft)
-  sr.reveal('.content-product-detail .information .detail .detail-container', fadeRight)
+  sr.reveal(
+    '.content-product-detail .information .detail .detail-container',
+    fadeRight,
+  )
   sr.reveal('.content-product-detail .ingredients', fadeLeft)
   sr.reveal('.content-product-detail .direction', fadeRight)
+  sr.reveal('.content-product-detail .share-buttons', fadeBottom)
   sr.reveal('.content-product-detail .banner', fadeBottom)
 </script>
 {{ end }}
