@@ -3,6 +3,15 @@
   "languageCode": "en-us",
   "title": "Brisuthi",
   "googleAnalytics": "UA-143298366-1",
+  "params": {
+    "contact": {
+      "phone": "6664 894 4255",
+      "line": "https://line.me/ti/p/@brisuthi",
+      "facebook": "https://www.facebook.com/brisuthi/",
+      "email": "Brisuthi.officials@gmail.com",
+      "address": "Borisut 888 Co.,Ltd Rd. 298/95 Ratchathewi<br />Bangkok Thailand 10400"
+    }
+  },
   "menu": {
     "footer": [
       {
@@ -19,7 +28,7 @@
       },
       {
         "name": "line",
-        "url": "http://line.me/ti/p/@brisuthi"
+        "url": "https://line.me/ti/p/@brisuthi"
       }
     ]
   }

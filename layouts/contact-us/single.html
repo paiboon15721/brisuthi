@@ -4,37 +4,46 @@
     <h1 class="title">contact us</h1>
   </div>
   <div class="content">
-    <div class="form">
+    <form
+      action="https://formspree.io/{{ .Site.Params.contact.email }}"
+      method="POST"
+      class="form"
+    >
       <div class="form-control">
         <label for="name">name</label>
-        <input type="text" name="name" />
+        <input type="text" name="name" required />
       </div>
       <div class="form-control">
         <label for="email">email</label>
-        <input type="text" name="email" />
+        <input type="email" name="email" required />
       </div>
       <div class="form-control">
         <label for="message">message</label>
-        <textarea rows="4" name="message"></textarea>
+        <textarea rows="4" name="message" required></textarea>
       </div>
-      <button>send</button>
-    </div>
+      <button type="submit">send</button>
+    </form>
     <div class="caption">
       <h2 class="title">for general inquiries</h2>
-      <h3 class="subtitle">Brisuthi.officials@gmail.com</h3>
+      <a href="mailto:{{ .Site.Params.contact.email }}">
+        <h3 class="subtitle">{{ .Site.Params.contact.email }}</h3>
+      </a>
     </div>
     <div class="caption">
       <h2 class="title">office address</h2>
-      <h3 class="subtitle">Borisut 888 Co.,Ltd Rd. 298/95 Ratchathewi</h3>
-      <h3 class="subtitle">Bangkok Thailand 10400</h3>
+      <h3 class="subtitle">{{ .Site.Params.contact.address | markdownify }}</h3>
     </div>
     <div class="caption">
       <h2 class="title">tel</h2>
-      <h3 class="subtitle">+6664 894 4255</h3>
+      <a href="callto:{{ replace .Site.Params.contact.phone ` ` `` }}">
+        <h3 class="subtitle">+{{ .Site.Params.contact.phone }}</h3>
+      </a>
     </div>
     <div class="caption">
       <h2 class="title">shop now</h2>
-      <h3 class="subtitle">LINE @brisuthi</h3>
+      <a target="_bank" href="{{ .Site.Params.contact.line }}">
+        <h3 class="subtitle">LINE @brisuthi</h3>
+      </a>
     </div>
   </div>
 </div>
