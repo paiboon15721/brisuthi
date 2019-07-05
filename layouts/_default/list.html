@@ -1,10 +1,12 @@
 {{ define "meta" }}
+{{ if in (slice "Facial" "Hair" "Body") .Title }}
 {{ $category := .Title | lower }}
 {{ $baseURL := $category | printf "img/new/%s" }}
 {{ range $index, $num := (seq 5) }}
 {{ $image := resources.Get (printf "%s/%d.jpg" $baseURL $num) }}
 {{ $image := $image.Resize "400x" }}
 <meta property="og:image" content="{{ $image.Permalink }}" />
+{{ end }}
 {{ end }}
 {{ end }}
 {{ define "content" }}
