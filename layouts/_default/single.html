@@ -1,10 +1,17 @@
+{{ define "meta" }}
+{{ range first 1 (.Resources.ByType "image") }}
+{{ $image := . }}
+{{ $image = $image.Resize "600x" }}
+<meta property="og:image" content="{{ $image.Permalink }}" />
+{{ end }}
+{{ end }}
 {{ define "content" }}
 <div class="content-product-detail container">
   <div class="information">
     <div class="detail">
       {{ range first 1 (.Resources.ByType "image") }}
       {{ $image := . }}
-      {{ $image := $image.Resize "1200x" }}
+      {{ $image = $image.Resize "1200x" }}
       <img src="{{ $image.RelPermalink }}" alt="product" />
       {{ end }}
       <div class="detail-container">
@@ -39,9 +46,7 @@
     </div>
     {{ end }}
   </div>
-  <div class="share-buttons">
-    Share on: {{ partial "share-buttons" . }}
-  </div>
+  <div class="share-buttons">Share on: {{ partial "share-buttons" . }}</div>
   <img
     class="banner"
     src="{{ `img/product/carousel/01.png` | relURL }}"
