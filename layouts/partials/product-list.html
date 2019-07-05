@@ -7,7 +7,9 @@
     <img src="{{ $image.RelPermalink }}" alt="product" />
     {{ end }}
     <div class="caption">
-      <h2>{{ .Title }}</h2>
+      <h2>
+        <a href="{{.Permalink}}">{{ .Title }}</a>
+      </h2>
       {{ if .Params.Tags }}
       {{ $tag := (index .Params.Tags 0)}}
       <h3>
@@ -17,7 +19,7 @@
       </h3>
       {{ end }}
       <p>{{ .Content | truncate 120 }}</p>
-      <a href="{{.Permalink}}">
+      <a class="btn" href="{{.Permalink}}">
         VIEW
         <span
           class="icon"
