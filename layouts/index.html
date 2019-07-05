@@ -1,7 +1,7 @@
 {{ define "meta" }}
 {{ range $index, $num := (seq 6) }}
 {{ $image := resources.Get (printf "img/new/home/%d.jpg" $num) }}
-{{ $image := $image.Fill "1200x630 Bottom" }}
+{{ $image := $image.Fill "1200x630" }}
 <meta property="og:image" content="{{ $image.Permalink }}" />
 {{ end }}
 {{ end }}
