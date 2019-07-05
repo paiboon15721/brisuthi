@@ -3,6 +3,7 @@ categories:
   - Facial
 tags:
   - Treat
+weight: 300
 title: 'Huile De Nuit'
 date: 2019-03-27T12:53:30+07:00
 draft: false

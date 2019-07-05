@@ -1,9 +1,10 @@
 {{ $currentPage := . }}
+{{ $tags := slice "cleanse" "mask" "treat" "moisture" }}
 <ul class="filter-menu">
-  {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-  <li class="{{ if eq ($currentPage.Title | lower) $name }}active{{ end }}">
-    <a href="{{ printf `/tags/%s` ($name | urlize ) | relURL }}">
-      {{ $name }}
+  {{ range $tags }}
+  <li class="{{ if eq ($currentPage.Title | lower) . }}active{{ end }}">
+    <a href="{{ printf `/tags/%s` (. | urlize ) | relURL }}">
+      {{ . }}
     </a>
   </li>
   {{ end }}

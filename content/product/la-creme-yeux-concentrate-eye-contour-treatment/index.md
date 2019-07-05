@@ -3,6 +3,7 @@ categories:
   - Facial
 tags:
   - Moisture
+weight: 400
 title: 'La Creme Yeux Concentrate Eye Contour Treatment'
 date: 2019-03-27T12:58:35+07:00
 draft: false

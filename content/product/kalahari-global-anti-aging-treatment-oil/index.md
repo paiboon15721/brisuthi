@@ -3,6 +3,7 @@ categories:
   - Facial
 tags:
   - Treat
+weight: 300
 title: 'Kalahari Global Anti-Aging Treatment Oil'
 date: 2019-03-27T12:55:13+07:00
 draft: false

@@ -3,6 +3,7 @@ categories:
   - Facial
 tags:
   - Mask
+weight: 200
 title: 'Sandalwood Exfoliating Mask'
 date: 2019-03-27T13:15:52+07:00
 draft: false
