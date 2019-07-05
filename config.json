@@ -2,6 +2,7 @@
   "baseURL": "https://www.brisuthi.com",
   "languageCode": "en-us",
   "title": "Brisuthi",
+  "googleAnalytics": "UA-143298366-1",
   "menu": {
     "footer": [
       {

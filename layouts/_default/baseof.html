@@ -1,72 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head
-    prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#"
-  >
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-143298366-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'UA-143298366-1')
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="title" content="{{ .Title }} | {{ .Site.Title }}" />
-    <meta name="description" content="{{ .Description }}" />
-    <meta property="og:title" content="{{ .Title }}" />
-    {{ if .IsPage }}
-    <meta property="og:type" content="article" />
-    <meta
-      property="article:published_time"
-      content="{{ .Date.Format '2006-01-02' }}"
-    />
-    {{ else }}
-    <meta property="og:type" content="website" />
-    {{
-      end
-    }}
-    <meta property="og:description" content="{{ .Description }}" />
-    <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:site_name" content="{{ .Site.Title }}" />
-    {{ if .Params.thumbnail }}
-    <meta
-      property="og:image"
-      content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
-    />
-    {{
-      end
-    }}
-    {{
-      range.Params.tags
-    }}
-    <meta property="og:tags" content="{{ . }}" />
-    {{
-      end
-    }}
-    {{ if .Site.Params.twitter_card_whitelisted }}
-    {{ if .Params.twitter_summary }}
-    <meta property="twitter:card" content="{{ .Params.twitter_summary }}" />
-    {{ else if .Description }}
-    <meta property="twitter:card" content="{{ .Description }}" />
-    {{ else }}
-    <meta property="twitter:card" content="{{ .Title }}" />
-    {{
-      end
-    }}
-    {{
-      end
-    }}
-    <meta property="twitter:description" content="{{ .Description }}" />
-    <meta property="twitter:title" content="{{ .Title }}" />
-    {{ if .Params.thumbnail }}
-    <meta
-      property="twitter:image"
-      content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"
-    />
-    {{
-      end
-    }}
-    {{ $image := resources.Get "img/new/home/2.jpg" }}
-    {{ $image := $image.Resize "300x" }}
-    <link rel="image_src" href="{{ $image.RelPermalink }}" />
-    {{
-      hugo.Generator
-    }}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/schema.html" . }}
+    {{ template "_internal/google_news.html" . }}
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
