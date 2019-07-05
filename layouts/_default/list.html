@@ -4,7 +4,7 @@
 {{ $baseURL := $category | printf "img/new/%s" }}
 {{ range $index, $num := (seq 5) }}
 {{ $image := resources.Get (printf "%s/%d.jpg" $baseURL $num) }}
-{{ $image := $image.Resize "400x" }}
+{{ $image := $image.Fill "1200x630 Bottom" }}
 <meta property="og:image" content="{{ $image.Permalink }}" />
 {{ end }}
 {{ end }}
