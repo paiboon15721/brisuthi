@@ -7,11 +7,12 @@
   </div>
   <div class="swiper-container img-slider">
     <div class="swiper-wrapper">
-      {{ range (readDir "/static/img/index/instagram") }}
-      {{ $image := .Name | printf "img/index/instagram/%s" | relURL }}
+      {{ range (readDir "/assets/img/instagram") }}
+      {{ $image := resources.Get (printf "img/instagram/%s" .Name) }}
+      {{ $image := $image.Resize "400x q50" }}
       <div
         class="swiper-slide"
-        style="background-image:url({{$image}})"
+        style="background-image:url({{$image.RelPermalink}})"
       ></div>
       {{ end }}
     </div>
