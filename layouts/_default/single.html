@@ -9,10 +9,11 @@
 <div class="content-product-detail container">
   <div class="information">
     <div class="detail">
+      {{ $page := . }}
       {{ range first 1 (.Resources.ByType "image") }}
       {{ $image := . }}
-      {{ $image = $image.Resize "1200x" }}
-      <img src="{{ $image.RelPermalink }}" alt="product" />
+      {{ $image = $image.Resize "1200x q50" }}
+      <img src="{{ $image.RelPermalink }}" alt="{{ $page.Title }}" />
       {{ end }}
       <div class="detail-container">
         <h1>{{ .Title }}</h1>
