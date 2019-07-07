@@ -11,8 +11,8 @@
       {{ $image := resources.Get (printf "img/instagram/%s" .Name) }}
       {{ $image := $image.Resize "400x q50" }}
       <div
-        class="swiper-slide"
-        style="background-image:url({{$image.RelPermalink}})"
+        class="lozad swiper-slide"
+        data-background-image="{{ $image.RelPermalink }}"
       ></div>
       {{ end }}
     </div>

@@ -49,6 +49,7 @@
       as="style"
       onload="this.rel='stylesheet'"
     />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
   </head>
   <body>
@@ -70,6 +71,7 @@
     {{ partial "header/scripts.html" }}
     {{ partial "footer/scripts.html" }}
     <script>
+      lozad().observe()
       var fade = {
         mobile: false,
         duration: 2000,

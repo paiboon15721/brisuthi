@@ -8,7 +8,7 @@
     <li>
       {{ $image := resources.Get (printf "%s/%d.jpg" $baseURL $num) }}
       {{ $image := $image.Resize $size }}
-      <img src="{{ $image.RelPermalink }}" alt="brisuthi gallery" />
+      <img class="lozad" data-src="{{ $image.RelPermalink }}" alt="brisuthi gallery" />
     </li>
     {{ end }}
   </ul>
@@ -17,7 +17,7 @@
     <li>
       {{ $image := resources.Get (printf "%s/%d.jpg" $baseURL (add $num $c1Num)) }}
       {{ $image := $image.Resize $size }}
-      <img src="{{ $image.RelPermalink }}" alt="brisuthi gallery" />
+      <img class="lozad" data-src="{{ $image.RelPermalink }}" alt="brisuthi gallery" />
     </li>
     {{ end }}
   </ul>

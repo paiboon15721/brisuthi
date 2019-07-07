@@ -5,7 +5,7 @@
     {{ range first 1 (.Resources.ByType "image") }}
     {{ $image := . }}
     {{ $image := $image.Resize "600x" }}
-    <img src="{{ $image.RelPermalink }}" alt="{{ $page.Title }}" />
+    <img class="lozad" data-src="{{ $image.RelPermalink }}" alt="{{ $page.Title }}" />
     {{ end }}
     <div class="caption">
       <h2>
