@@ -1,6 +1,7 @@
 .filter-menu {
   display: flex;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: center;
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 5rem 10rem;
@@ -12,9 +13,12 @@
   @include media('<mobile') {
     margin: 5rem 0;
     font-size: 2rem;
+    padding: 0 5rem;
   }
 
   li {
+    width: 15rem;
+    margin-top: 2rem;
     &:hover,
     &.active {
       font-weight: bold;
