@@ -7,9 +7,10 @@
   <ul class="press-list">
     <li>
       <figure>
+        {{ $image := resources.Get "img/press/01.jpg" }}
         <img
           class="lozad"
-          data-src="{{ `img/press/01.png` | relURL }}"
+          data-src="{{ $image.RelPermalink }}"
           alt="HAPPER'S BAZAAR MAGAZINE"
         />
         <figcaption>
@@ -20,9 +21,10 @@
     </li>
     <li>
       <figure>
+        {{ $image := resources.Get "img/press/02.jpg" }}
         <img
           class="lozad"
-          data-src="{{ `img/press/02.png` | relURL }}"
+          data-src="{{ $image.RelPermalink }}"
           alt="LIPS MAGAZINE"
         />
         <figcaption>
@@ -33,9 +35,10 @@
     </li>
     <li>
       <figure>
+        {{ $image := resources.Get "img/press/03.jpg" }}
         <img
           class="lozad"
-          data-src="{{ `img/press/03.png` | relURL }}"
+          data-src="{{ $image.RelPermalink }}"
           alt="ARPER'S BAZAAR MAGAZINE"
         />
         <figcaption>

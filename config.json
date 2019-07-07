@@ -2,6 +2,8 @@
   "baseURL": "https://www.brisuthi.com",
   "languageCode": "en-us",
   "title": "Brisuthi",
+  "enableRobotsTXT": true,
+  "canonifyURLs": true,
   "googleAnalytics": "UA-143298366-1",
   "params": {
     "description": "A quest for perfect balance between sustainable beauty, precious gifts from nature and urban lifestyle empowers us to create Brisuthi, commonly defined as \"Pure in Thai\"",

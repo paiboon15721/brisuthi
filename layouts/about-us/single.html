@@ -4,7 +4,9 @@
     <h1 class="title">{{ .Title }}</h1>
   </div>
   <div class="content">
-    <img src="{{ `img/about-us/about-us.png` | relURL }}" alt="about-us" />
+    {{ $image := resources.Get "img/about-us/about-us.jpg" }}
+    {{ $image := $image.Resize "1200x q50" }}
+    <img src="{{ $image.RelPermalink }}" alt="about-us" />
     <div class="philosophy">
       <h2>our philosophy</h2>
       {{ .Content }}
