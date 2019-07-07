@@ -1,31 +1,13 @@
 {{ define "content" }}
 <div class="content-about-us container">
   <div class="page-header">
-    <h1 class="title">about us</h1>
+    <h1 class="title">{{ .Title }}</h1>
   </div>
   <div class="content">
     <img src="{{ `img/about-us/about-us.png` | relURL }}" alt="about-us" />
     <div class="philosophy">
       <h2>our philosophy</h2>
-      <p>
-        A quest for perfect balance between sustainable beauty, precious gifts
-        from nature and urban lifestyle empowers us to create Brisuthi, commonly
-        defined as "Pure in Thai".
-      </p>
-      <p>
-        We are attracted by organic beauty and strong passion inspired by nature
-        that gives us the most precious a finest ingredients. This integration
-        crystalizes a true scent of organic beauty and leads us to create the
-        line that is simple, minimal, luxurious, yet miraculously effective
-        without adding colors, perfumes, parabens or unnecessary chemical
-        substances.
-      </p>
-      <p>
-        We produce our organically-based products with innovative, visionary and
-        honest mind, believing simplicity of nature empowers unparalleled
-        beauty. To ensure our high-quality, we only pick and choose the best
-        from its origin.
-      </p>
+      {{ .Content }}
     </div>
   </div>
 </div>
