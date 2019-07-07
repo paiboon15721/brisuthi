@@ -1,7 +1,7 @@
 .filter-menu {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 5rem 10rem;
@@ -17,8 +17,7 @@
   }
 
   li {
-    width: 15rem;
-    margin-top: 2rem;
+    margin: 2rem;
     &:hover,
     &.active {
       font-weight: bold;
