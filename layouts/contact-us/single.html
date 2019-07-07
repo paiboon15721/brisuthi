@@ -11,15 +11,15 @@
     >
       <div class="form-control">
         <label for="name">name</label>
-        <input type="text" name="name" required />
+        <input type="text" id="name" name="name" required />
       </div>
       <div class="form-control">
         <label for="email">email</label>
-        <input type="email" name="email" required />
+        <input type="email" id="email" name="email" required />
       </div>
       <div class="form-control">
         <label for="message">message</label>
-        <textarea rows="4" name="message" required></textarea>
+        <textarea rows="4" id="message" name="message" required></textarea>
       </div>
       <button type="submit">send</button>
     </form>
@@ -41,7 +41,7 @@
     </div>
     <div class="caption">
       <h2 class="title">shop now</h2>
-      <a target="_bank" href="{{ .Site.Params.contact.line }}">
+      <a target="_bank" href="{{ .Site.Params.contact.line }}" rel="noopener">
         <h3 class="subtitle">LINE @brisuthi</h3>
       </a>
     </div>

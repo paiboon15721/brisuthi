@@ -110,14 +110,8 @@
         letter-spacing: 0.15rem;
         font-weight: 200;
 
-        &.sub-menu {
-          // font-size: 1.5rem;
-          // padding-left: 7rem;
-        }
-
         &:hover,
         &.active {
-          // border-bottom: 1.2px solid $primary;
           font-weight: bold;
         }
 

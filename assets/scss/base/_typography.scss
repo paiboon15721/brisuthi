@@ -1,6 +1,7 @@
 @font-face {
-  font-family: NooaDemiSerif;
-  src: url(../fonts/NooaDemiSerif-Regular.woff);
+  font-family: 'Prompt', sans-serif;
+  font-display: swap;
+  src: local('Prompt'), url('https://fonts.googleapis.com/css?family=Prompt:200,300');
 }
 
 html {

@@ -95,11 +95,12 @@ footer {
     align-content: center;
     align-items: center;
 
-    h2 {
+    label {
       font-weight: 300;
       margin-bottom: 2rem;
       letter-spacing: 0.3rem;
       font-size: 1.5rem;
+      text-transform: uppercase;
     }
 
     .newsletter-input {

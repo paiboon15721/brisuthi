@@ -1,7 +1,7 @@
 <footer>
   <div class="follow-us">
     <h3>- follow our -</h3>
-    <a href="https://www.instagram.com/brisuthi.th/" target="_blank">
+    <a href="https://www.instagram.com/brisuthi.th/" target="_blank" rel="noopener">
       <h2>instagram</h2>
     </a>
   </div>
@@ -22,7 +22,7 @@
     <ul class="social-link">
       {{ range.Site.Menus.footer }}
         <li>
-          <a href="{{ .URL }}" target="_blank">{{ .Name }}</a>
+          <a href="{{ .URL }}" target="_blank" rel="noopener">{{ .Name }}</a>
         </li>
       {{ end }}
     </ul>
