@@ -2,8 +2,8 @@
 categories:
   - Facial
 tags:
-  - Moisture
-weight: 400
+  - Protect
+weight: 600
 title: 'Le Soleil'
 date: 2019-03-27T13:13:39+07:00
 draft: false

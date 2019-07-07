@@ -1,5 +1,5 @@
 {{ $currentPage := . }}
-{{ $tags := slice "cleanse" "mask" "treat" "moisture" }}
+{{ $tags := slice "cleanse" "tone" "mask" "treat" "moisture" "protect" }}
 <ul class="filter-menu">
   {{ range $tags }}
   <li class="{{ if eq ($currentPage.Title | lower) . }}active{{ end }}">

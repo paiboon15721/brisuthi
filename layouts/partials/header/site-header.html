@@ -1,22 +1,27 @@
 <header class="header">
   <nav class="navigation" role="navigation">
     <div id="menuToggle">
-      <input type="checkbox" />
+      <label for="menu-toggle"></label>
+      <input type="checkbox" id="menu-toggle" />
       <span></span>
       <span></span>
       <span></span>
       <ul id="menu">
         {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-          <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
-            <a href="{{ .URL }}">{{ .Name }}</a>
-          </li>
+        {{ range.Site.Menus.main }}
+        <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
         {{ end }}
       </ul>
     </div>
   </nav>
   <a href="{{ `/` | relURL }}">
-    <img class="logo" src="{{ `img/icon/logo.svg` | relURL }}" alt="brisuthi">
+    <img class="logo" src="{{ `img/icon/logo.svg` | relURL }}" alt="brisuthi" />
   </a>
-  <img class="search" src="{{ `img/icon/magnifying-glass.svg` | relURL }}" alt="Search" />
+  <img
+    class="search"
+    src="{{ `img/icon/magnifying-glass.svg` | relURL }}"
+    alt="Search"
+  />
 </header>
