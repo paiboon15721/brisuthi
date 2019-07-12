@@ -1,7 +1,7 @@
 ---
 categories:
   - Body
-title: 'Le Soliel Body'
+title: 'Le Soleil Body'
 date: 2019-03-27T13:17:31+07:00
 draft: false
 size: 30
