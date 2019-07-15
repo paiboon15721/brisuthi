@@ -1,0 +1,25 @@
+<div class="product-item">
+  {{ $page := . }}
+  {{ range first 1 (.Resources.ByType "image") }}
+  {{ $image := . }}
+  {{ $image := $image.Resize "600x" }}
+  <img
+    class="lozad"
+    data-src="{{ $image.RelPermalink }}"
+    alt="{{ $page.Title }}"
+  />
+  {{ end }}
+  <div class="caption">
+    <h2>
+      <a href="{{.Permalink}}">{{ .Title }}</a>
+    </h2>
+    <p>{{ .Content | truncate 120 }}</p>
+    <a class="btn" href="{{.Permalink}}">
+      VIEW
+      <span
+        class="icon"
+        style="background:url({{`img/icon/right-arrow.svg`|relURL}}) no-repeat;"
+      ></span>
+    </a>
+  </div>
+</div>
