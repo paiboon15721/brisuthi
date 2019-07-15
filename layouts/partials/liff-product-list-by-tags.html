@@ -1,0 +1,19 @@
+{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+{{ if eq "tags" $taxonomyname }}
+{{ $tags := slice "cleanse" "tone" "mask" "treat" "moisture" "protect" }}
+{{ range $tag := $tags }}
+{{ range $key, $value := $taxonomy }}
+{{ if eq $tag $key }}
+<div class="title">
+  <h1>{{ $tag }}</h1>
+</div>
+<div class="product-list">
+  {{ range $value.Pages }}
+  {{ partial "liff-product-item" . }}
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}
+{{ end }}
+{{ end }}
+{{ end }}
