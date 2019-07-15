@@ -12,7 +12,9 @@
 {{ define "content" }}
 <div class="content-product">
   {{ partial "gallery.html" . }}
-  {{ partial "categories-menu.html" . }}
+  <div class="title">
+    <h1>{{ .Title }}</h1>
+  </div>
   {{ partial "product-list.html" . }}
   <div class="quote-container container">
     <img
