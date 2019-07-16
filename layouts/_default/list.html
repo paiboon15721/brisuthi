@@ -12,10 +12,10 @@
 {{ define "content" }}
 <div class="content-product">
   {{ partial "gallery.html" . }}
-  {{ if ne .Title "Facial" }}
-  {{ partial "product-list.html" . }}
-  {{ else }}
+  {{ if eq .Title "Facial" }}
   {{ partial "product-list-by-tags.html" . }}
+  {{ else }}
+  {{ partial "product-list.html" . }}
   {{ end }}
   <div class="quote-container container">
     <img

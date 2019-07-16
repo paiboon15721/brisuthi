@@ -1,6 +1,8 @@
 ---
 categories:
   - Hair
+tags:
+  - Highlight
 title: "L'Huile De Ungurahua Hair Treatment Oil"
 date: 2019-03-27T13:58:37+07:00
 draft: false

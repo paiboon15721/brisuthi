@@ -1,9 +1,11 @@
 {{ define "content" }}
 <div class="content-product">
-  {{ if ne .Title "Facial" }}
-  {{ partial "liff-product-list.html" . }}
-  {{ else }}
+  {{ if eq .Title "Facial" }}
   {{ partial "liff-product-list-by-tags.html" . }}
+  {{ else if eq .Title "Highlight" }}
+  {{ partial "liff-product-list-highlight.html" . }}
+  {{ else }}
+  {{ partial "liff-product-list.html" . }}
   {{ end }}
 </div>
 {{ end }}
