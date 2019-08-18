@@ -1,13 +1,15 @@
 <script>
-  const profile = {
-    name: 'paiboon',
-    age: 30,
-  }
-  document.getElementById('test-data').textContent = JSON.stringify(
-    profile,
-    null,
-    2,
-  )
+  axios
+    .get(
+      'http://localhost:4000/api/rewards?userId=U5905181fde8e199deef987cbc54b438b',
+    )
+    .then(function(res) {
+      document.getElementById('test-data').textContent = JSON.stringify(
+        res.data,
+        null,
+        2,
+      )
+    })
 
   liff.init(function(data) {
     document.getElementById('liff-data').textContent = JSON.stringify(
