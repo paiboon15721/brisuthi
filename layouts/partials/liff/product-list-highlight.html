@@ -1,6 +1,6 @@
 {{ $page := . }}
 {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-{{ if eq "categories" $taxonomyname }}
+{{ if eq "tags" $taxonomyname }}
 {{ range $key, $value := $taxonomy }}
 {{ if eq $key ($page.Title | lower) }}
 <div class="title">
@@ -8,7 +8,7 @@
 </div>
 <div class="product-list">
   {{ range $value.Pages }}
-  {{ partial "liff-product-item" . }}
+  {{ partial "liff/product-item" . }}
   {{ end }}
 </div>
 {{ end }}
