@@ -9,3 +9,12 @@
   {{ end }}
 </div>
 {{ end }}
+{{ define "javascript" }}
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"
+></script>
+<script>
+  lozad().observe()
+</script>
+{{ end }}
