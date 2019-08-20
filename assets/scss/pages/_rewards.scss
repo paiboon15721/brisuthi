@@ -1,0 +1,12 @@
+.rewards {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+
+  .loading {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}

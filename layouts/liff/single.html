@@ -1,8 +1,79 @@
 {{ define "content" }}
-{{ partial "liff/rewards/site-rewards.html" }}
+<div class="container rewards" id="app">
+  <div class="page-header">
+    <h1 class="title">${title}</h1>
+  </div>
+  <div class="content">
+    <div class="loading" v-show="loading">
+      <p>Loading...</p>
+    </div>
+    <div class="success" v-if="tier">${tier}</div>
+    <div class="register" v-if="status === 'Unauthorized'">
+      <form
+        id="registerForm"
+        ref="registerForm"
+        @submit.prevent="submit"
+        class="form"
+      >
+        <div class="form-control">
+          <label for="email">email</label>
+          <input
+            type="email"
+            v-model="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
 {{ end }}
 {{ define "javascript" }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-{{ partial "liff/rewards/scripts.html" }}
+<script>
+  var baseUrl = 'http://localhost:4000'
+  liff.init = f =>
+    f({ context: { userId: 'U5905181fde8e199deef987cbc54b438bb' } })
+  liff.init(function(line) {
+    var app = new Vue({
+      el: '#app',
+      delimiters: ['${', '}'],
+      data: {
+        tier: null,
+        status: null,
+        title: 'rewards',
+        email: '',
+        loading: false,
+      },
+      methods: {
+        submit: function() {
+          console.log(this.email)
+        },
+      },
+      mounted() {
+        this.loading = true
+        axios
+          .get(`${baseUrl}/api/rewards?userId=${line.context.userId}`)
+          .then(res => {
+            this.tier = res.data.data
+            this.loading = false
+          })
+          .catch(e => {
+            this.status = e.response.data.message
+            if (this.status === 'Unauthorized') {
+              this.title = 'Please register your email.'
+            } else {
+              this.title = 'wating for approval.'
+            }
+            this.loading = false
+          })
+      },
+    })
+  })
+</script>
 {{ end }}
