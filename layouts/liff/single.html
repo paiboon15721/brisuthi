@@ -2,12 +2,19 @@
 <div class="container rewards" id="app">
   <div class="page-header">
     <h1 class="title">${title}</h1>
+    <h2 class="subtitle" v-show="message">${message}</h2>
   </div>
   <div class="content">
     <div class="loading" v-show="loading">
       <p>Loading...</p>
     </div>
-    <div class="success" v-if="tier">${tier}</div>
+    <div class="success" v-if="tier">
+      <div class="center">
+        <p>Tier: ${tier.tier}</p>
+        <p>Online discount: ${tier.onlineDiscount}%</p>
+        <p>Birthday discount: ${tier.birthdayDiscount}%</p>
+      </div>
+    </div>
     <div class="register" v-if="status === 'Unauthorized'">
       <form
         id="registerForm"
@@ -25,7 +32,7 @@
             required
           />
         </div>
-        <button type="submit">Register</button>
+        <button :disabled="loading" type="submit">Register</button>
       </form>
     </div>
   </div>
@@ -38,7 +45,7 @@
 <script>
   var baseUrl = 'http://localhost:4000'
   liff.init = f =>
-    f({ context: { userId: 'U5905181fde8e199deef987cbc54b438bb' } })
+    f({ context: { userId: 'U5905181fde8e199deef987cbc54b438b' } })
   liff.init(function(line) {
     var app = new Vue({
       el: '#app',
@@ -48,11 +55,33 @@
         status: null,
         title: 'rewards',
         email: '',
+        message: null,
         loading: false,
       },
       methods: {
         submit: function() {
-          console.log(this.email)
+          this.loading = true
+          axios
+            .post(`${baseUrl}/api/registers`, {
+              email: this.email,
+              userId: line.context.userId,
+            })
+            .then(res => {
+              this.status = 'waitForApprove'
+              this.title = 'waiting for approval.'
+              this.loading = false
+            })
+            .catch(e => {
+              var message = e.response.data.message
+              if (message === 'emailNotFound') {
+                this.message = 'Email not found, please contact admin.'
+              } else if (message === 'emailDuplicate') {
+                this.message = 'This email aready registered.'
+              } else {
+                this.message = this.status
+              }
+              this.loading = false
+            })
         },
       },
       mounted() {
@@ -68,7 +97,7 @@
             if (this.status === 'Unauthorized') {
               this.title = 'Please register your email.'
             } else {
-              this.title = 'wating for approval.'
+              this.title = 'waiting for approval.'
             }
             this.loading = false
           })

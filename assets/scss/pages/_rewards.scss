@@ -5,8 +5,21 @@
   justify-content: center;
   height: 100vh;
 
+  .success {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    .center {
+      width: auto;
+    }
+  }
+
   .loading {
     text-align: center;
     font-size: 2.5rem;
+  }
+
+  .page-header {
+    margin-bottom: 2.5rem;
   }
 }
