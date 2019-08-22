@@ -9,7 +9,7 @@ draft: false
 size: 30
 sizeDesc: '/piece (3 pieces per pack)'
 price: 2190
-direction: ''
+direction: 'After cleansing and toning your skin, leave the mask on your face for 20 minutes and follow with your skincare routine'
 ingredients:
   [
     'Finger lime caviar extract',
