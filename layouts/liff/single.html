@@ -62,7 +62,7 @@
         submit: function() {
           this.loading = true
           axios
-            .post(`${baseUrl}/api/registers`, {
+            .post(`${baseUrl}/registers`, {
               email: this.email,
               userId: line.context.userId,
             })
@@ -87,7 +87,7 @@
       mounted() {
         this.loading = true
         axios
-          .get(`${baseUrl}/api/rewards?userId=${line.context.userId}`)
+          .get(`${baseUrl}/rewards?userId=${line.context.userId}`)
           .then(res => {
             this.tier = res.data.data
             this.loading = false
