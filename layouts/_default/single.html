@@ -19,7 +19,7 @@
         <h1>{{ .Title }}</h1>
         <div class="size-price">
           {{ if .Params.size }}
-          <p>size : {{ .Params.size | float }} ml.</p>
+          <p>size : {{ .Params.size | float }} ml.{{ .Params.sizeDesc }}</p>
           {{ end }}
           {{ if .Params.price }}
           <p>price : {{ .Params.price | int | lang.NumFmt 0 }} baht</p>
