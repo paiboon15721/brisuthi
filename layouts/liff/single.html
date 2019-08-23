@@ -10,9 +10,9 @@
     </div>
     <div class="success" v-if="tier">
       <div class="center">
-        <p>Tier: ${tier.tier}</p>
-        <p>Online discount: ${tier.onlineDiscount}%</p>
-        <p>Birthday discount: ${tier.birthdayDiscount}%</p>
+        <p>Tier: <b style="text-transform: capitalize">${tier.tier}</b></p>
+        <p>Online discount: <b>${tier.onlineDiscount}%</b></p>
+        <p>Birthday discount: <b>${tier.birthdayDiscount}%</b></p>
         <p v-if="tier.next" style="color:green;">
           ** You need to buy more ${tier.lack | toNum} baht to get
           <b style="text-transform: capitalize;">${tier.next.tier}</b> tier,
