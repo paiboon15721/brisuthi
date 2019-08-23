@@ -52,9 +52,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
 <script>
-  var baseUrl = 'http://localhost:4000'
-  liff.init = f =>
-    f({ context: { userId: 'U5905181fde8e199deef987cbc54b438b' } })
+  var baseUrl = 'https://api.brisuthi.com'
   liff.init(function(line) {
     var app = new Vue({
       el: '#app',
@@ -70,27 +68,29 @@
       methods: {
         submit: function() {
           this.loading = true
-          axios
-            .post(`${baseUrl}/registers`, {
-              email: this.email,
-              userId: line.context.userId,
-            })
-            .then(res => {
-              this.status = 'waitForApprove'
-              this.title = 'waiting for approval.'
-              this.loading = false
-            })
-            .catch(e => {
-              var message = e.response.data.message
-              if (message === 'emailNotFound') {
-                this.message = 'Email not found, please contact admin.'
-              } else if (message === 'emailDuplicate') {
-                this.message = 'This email aready registered.'
-              } else {
-                this.message = this.status
-              }
-              this.loading = false
-            })
+          liff.getProfile().then(profile => {
+            axios
+              .post(`${baseUrl}/registers`, {
+                email: this.email,
+                ...profile,
+              })
+              .then(res => {
+                this.status = 'waitForApprove'
+                this.title = 'waiting for approval.'
+                this.loading = false
+              })
+              .catch(e => {
+                var message = e.response.data.message
+                if (message === 'emailNotFound') {
+                  this.message = 'Email not found, please contact admin.'
+                } else if (message === 'emailDuplicate') {
+                  this.message = 'This email aready registered.'
+                } else {
+                  this.message = this.status
+                }
+                this.loading = false
+              })
+          })
         },
       },
       filters: {
