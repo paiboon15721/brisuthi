@@ -13,6 +13,15 @@
         <p>Tier: ${tier.tier}</p>
         <p>Online discount: ${tier.onlineDiscount}%</p>
         <p>Birthday discount: ${tier.birthdayDiscount}%</p>
+        <p v-if="tier.next" style="color:green;">
+          ** You need to buy more ${tier.lack | toNum} baht to get
+          <b style="text-transform: capitalize;">${tier.next.tier}</b> tier,
+          then you will get
+          <b>
+            ${tier.next.onlineDiscount}% online discount and
+            ${tier.next.birthdayDiscount}% birthday discount.
+          </b>
+        </p>
       </div>
     </div>
     <div class="register" v-if="status === 'Unauthorized'">
@@ -82,6 +91,11 @@
               }
               this.loading = false
             })
+        },
+      },
+      filters: {
+        toNum: function(n) {
+          return n.toLocaleString()
         },
       },
       mounted: function() {
