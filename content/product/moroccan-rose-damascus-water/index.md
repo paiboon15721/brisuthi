@@ -8,7 +8,7 @@ title: 'Moroccan Rose Damascus Water'
 date: 2019-03-18T19:43:32+07:00
 draft: false
 size: 100
-price: 590
+price: 790
 direction: 'After cleansing, spray directly on the skin or on a cotton ball. Then gently apply to your face and neck, allowing time to fully absorb into your skin.'
 ingredients:
   [
