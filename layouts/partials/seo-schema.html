@@ -19,8 +19,6 @@
   name="description"
   content="{{ with.Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with.Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"
 />
-{{ block "meta" . }}
-{{ end }}
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 {{ template "_internal/schema.html" . }}

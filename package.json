@@ -4,7 +4,8 @@
   "description": "brisuthi web page",
   "main": "index.js",
   "scripts": {
-    "deploy": "rimraf public && hugo --minify && gh-pages -d public"
+    "deploy": "rimraf public && hugo --minify && gh-pages -d public",
+    "update": "git add -A && git commit -m 'update' && git push"
   },
   "author": "Paiboon Auengkongkatong",
   "license": "ISC",
