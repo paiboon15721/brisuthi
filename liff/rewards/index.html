@@ -10,6 +10,7 @@ ${tier.next.birthdayDiscount}% birthday discount.</b></p></div></div><div class=
 liff.init(function(line){var app=new Vue({el:'#app',delimiters:['${','}'],data:{tier:null,status:null,title:'rewards',email:'',message:null,loading:false,},methods:{submit:function(){this.loading=true
 liff.getProfile().then(profile=>{axios.post(`${baseUrl}/registers`,{email:this.email,...profile,}).then(res=>{this.status='waitForApprove'
 this.title='waiting for approval.'
+this.message=''
 this.loading=false}).catch(e=>{var message=e.response.data.message
 if(message==='emailNotFound'){this.message='Email not found, please contact admin.'}else if(message==='emailDuplicate'){this.message='This email aready registered.'}else{this.message=this.status}
 this.loading=false})})},},filters:{toNum:function(n){return n.toLocaleString()},},mounted:function(){this.loading=true
