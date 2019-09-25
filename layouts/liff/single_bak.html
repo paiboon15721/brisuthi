@@ -52,7 +52,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
 <script>
-  var baseUrl = 'https://api.brisuthi.com'
+  // var baseUrl = 'https://api.brisuthi.com'
+
+  var profile = {
+    userId: 'U5905181fde8e199deef987cbc54b438b',
+    displayName: 'Paiboon :D',
+    pictureUrl:
+      'https://profile.line-scdn.net/0hhV9g3e7IN3kEHhpe3hBILjhbORRzMDExfCpwHHNOakwtenAqPXl8SyNOaht-L3Iua315S3VMbkh7',
+    statusMessage:
+      'If you always do what you’ve always done, ' +
+      'you’ll always get what you’ve always ' +
+      'gotten.',
+  }
+  var baseUrl = 'http://localhost:4000'
   var app = new Vue({
     el: '#app',
     delimiters: ['${', '}'],
@@ -67,30 +79,30 @@
     methods: {
       submit: function() {
         this.loading = true
-        liff.getProfile().then(profile => {
-          axios
-            .post(`${baseUrl}/registers`, {
-              email: this.email,
-              ...profile,
-            })
-            .then(res => {
-              this.status = 'waitForApprove'
-              this.title = 'waiting for approval.'
-              this.message = ''
-              this.loading = false
-            })
-            .catch(e => {
-              var message = e.response.data.message
-              if (message === 'emailNotFound') {
-                this.message = 'Email not found, please contact admin.'
-              } else if (message === 'emailDuplicate') {
-                this.message = 'This email aready registered.'
-              } else {
-                this.message = this.status
-              }
-              this.loading = false
-            })
-        })
+        // liff.getProfile().then(profile => {
+        axios
+          .post(`${baseUrl}/registers`, {
+            email: this.email,
+            ...profile,
+          })
+          .then(res => {
+            this.status = 'waitForApprove'
+            this.title = 'waiting for approval.'
+            this.message = ''
+            this.loading = false
+          })
+          .catch(e => {
+            var message = e.response.data.message
+            if (message === 'emailNotFound') {
+              this.message = 'Email not found, please contact admin.'
+            } else if (message === 'emailDuplicate') {
+              this.message = 'This email aready registered.'
+            } else {
+              this.message = this.status
+            }
+            this.loading = false
+          })
+        //})
       },
     },
     filters: {
