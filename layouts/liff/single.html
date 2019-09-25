@@ -100,8 +100,6 @@
     },
   })
   app.loading = true
-  liff.init = f =>
-    f({ context: { userId: 'U5905181fde8e199deef987cbc54b438b' } })
   liff.init(function(line) {
     axios
       .get(`${baseUrl}/rewards?userId=${line.context.userId}`)
