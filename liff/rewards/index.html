@@ -7,14 +7,16 @@ then you will get
 <b>${tier.next.onlineDiscount}% online discount and
 ${tier.next.birthdayDiscount}% birthday discount.</b></p></div></div><div class=register v-if="status === 'Unauthorized'"><form id=registerForm ref=registerForm @submit.prevent=submit class=form><div class=form-control><label for=email>email</label>
 <input type=email v-model=email id=email name=email required></div><button :disabled=loading type=submit>Register</button></form></div></div></div></main><script src=https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js></script><script src=https://d.line-scdn.net/liff/1.0/sdk.js></script><script>var baseUrl='https://api.brisuthi.com'
-liff.init(function(line){var app=new Vue({el:'#app',delimiters:['${','}'],data:{tier:null,status:null,title:'rewards',email:'',message:null,loading:false,},methods:{submit:function(){this.loading=true
+var app=new Vue({el:'#app',delimiters:['${','}'],data:{tier:null,status:null,title:'rewards',email:'',message:null,loading:false,},methods:{submit:function(){this.loading=true
 liff.getProfile().then(profile=>{axios.post(`${baseUrl}/registers`,{email:this.email,...profile,}).then(res=>{this.status='waitForApprove'
 this.title='waiting for approval.'
 this.message=''
 this.loading=false}).catch(e=>{var message=e.response.data.message
 if(message==='emailNotFound'){this.message='Email not found, please contact admin.'}else if(message==='emailDuplicate'){this.message='This email aready registered.'}else{this.message=this.status}
-this.loading=false})})},},filters:{toNum:function(n){return n.toLocaleString()},},mounted:function(){this.loading=true
-axios.get(`${baseUrl}/rewards?userId=${line.context.userId}`).then(res=>{this.tier=res.data.data
-this.loading=false}).catch(e=>{this.status=e.response.data.message
-if(this.status==='Unauthorized'){this.title='Please register your email.'}else{this.title='waiting for approval.'}
-this.loading=false})},})})</script></body></html>
+this.loading=false})})},},filters:{toNum:function(n){return n.toLocaleString()},},})
+app.loading=true
+liff.init=f=>f({context:{userId:'U5905181fde8e199deef987cbc54b438b'}})
+liff.init(function(line){axios.get(`${baseUrl}/rewards?userId=${line.context.userId}`).then(res=>{app.tier=res.data.data
+app.loading=false}).catch(e=>{app.status=e.response.data.message
+if(app.status==='Unauthorized'){app.title='Please register your email.'}else{app.title='waiting for approval.'}
+app.loading=false})})</script></body></html>
