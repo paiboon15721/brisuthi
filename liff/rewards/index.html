@@ -15,7 +15,6 @@ this.loading=false}).catch(e=>{var message=e.response.data.message
 if(message==='emailNotFound'){this.message='Email not found, please contact admin.'}else if(message==='emailDuplicate'){this.message='This email aready registered.'}else{this.message=this.status}
 this.loading=false})})},},filters:{toNum:function(n){return n.toLocaleString()},},})
 app.loading=true
-liff.init=f=>f({context:{userId:'U5905181fde8e199deef987cbc54b438b'}})
 liff.init(function(line){axios.get(`${baseUrl}/rewards?userId=${line.context.userId}`).then(res=>{app.tier=res.data.data
 app.loading=false}).catch(e=>{app.status=e.response.data.message
 if(app.status==='Unauthorized'){app.title='Please register your email.'}else{app.title='waiting for approval.'}
