@@ -17,7 +17,7 @@ ingredients:
     Pepper mountain extract,
     Gycosaminoglycan,
     Watermelon extract,
-    Hyausphere,
+    Spheres Sodium hyaluronate,
     Green coffee oil,
   ]
 ---

@@ -12,7 +12,7 @@ price: 990
 direction: 'Use 1 pump, massage a proper amount onto your face and rinse off with water. Day and night.'
 ingredients:
   [
-    'Geranium water',
+    'Geranium Essential oil',
     'Rose damascus extract',
     'Chamomile extract',
     'Cactus extract',

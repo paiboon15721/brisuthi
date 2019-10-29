@@ -16,7 +16,7 @@ ingredients:
     'Davidson plum extract',
     'Snowflower extract',
     'Comfry extract',
-    'Spherulite sodim hyaluronate',
+    'Sodium hyaluronate',
   ]
 ---
 

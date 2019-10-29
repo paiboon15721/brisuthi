@@ -4,8 +4,8 @@ categories:
 title: 'Le Soleil Body'
 date: 2019-03-27T13:17:31+07:00
 draft: false
-size: 30
-price: 1890
+size: 200
+price: 2190
 direction: 'Apply Le Soleil Brightening body protection SPF 50+ on body as the last step in the morning before exposure to the sun.'
 ingredients:
   [

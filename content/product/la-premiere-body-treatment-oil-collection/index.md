@@ -64,17 +64,6 @@ This Aloe vera barbadensis oil-based treatment is safe for pregnancy and helps r
 <br>
 **Main Ingredients:** Aloe vara oil, Neroli essential oil, Lavender essential oil \*Organically-harvested
 
-## Manoi de tahiti body treatment oil:
-
-<div class="size-price">
-  <p>size : 150 ml.</p>
-  <p>price : 1,490 baht</p>
-</div>
-
-Manoi de tahiti, The tahitian beauty secret is rich in essential fatty acids, vitamin E and free radical-fighting antioxidants -- makes for strong skin-moisturizing ability, the tiare flowers used to create the oil contain methyl salicylate, lending it anti-inflammatory properties. After 4 weeks,, Monoi bolsters skin elasticity by about 27 percent. In addition to moisturizing and soothing the skin, this versatile oil can be used to nourish your hair. Bolsters shine and decreases frizz.
-<br>
-**Main Ingredients:** Coconut oil, Polynesian Tiare (Gardenia) flowers
-
 ## Scents of Mediterranean:
 
 <div class="size-price">
