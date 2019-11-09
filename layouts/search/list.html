@@ -1,0 +1,55 @@
+{{ define "content" }}
+<div class="container">
+  <form method="get" action="">
+    <input id="search" name="q" type="text" />
+    <button type="submit" class="button">Search</button>
+    <a href="/search">Clear</a>
+  </form>
+  <div id="app"></div>
+</div>
+{{ end }}
+{{ define "javascript" }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+{{ $p := slice }}
+{{ range (where .Site.RegularPages "Section" "==" "product") }}
+{{ $post := dict "link" .RelPermalink "title" .Title "content" (substr .Plain 0 200) -}}
+{{ $p = $p | append $post -}}
+{{ end }}
+<script>
+  const products = JSON.parse(
+    {{ $p | jsonify }}
+  );
+  const query = new URLSearchParams(window.location.search);
+  const searchString = query.get('q');
+  document.querySelector('#search').value = searchString;
+  const $target = document.querySelector('#app');
+  // Our index uses title as a reference
+  const productsByTitle = products.reduce((acc, curr) => {
+    acc[curr.title] = curr;
+    return acc;
+  }, {});
+  axios.get('/search-index.json').then(function (res) {
+    const index = lunr.Index.load(res.data);
+    const matches = index.search(searchString);
+    const matchProducts = [];
+    matches.forEach((m) => {
+      matchProducts.push(productsByTitle[m.ref]);
+    });
+    if (matchProducts.length > 0) {
+      $target.innerHTML = matchProducts.map(p => {
+        return `<div>
+          <h3><a href="${p.link}">${p.title}</a></h3>
+          <p>${p.content}...</p>
+        </div>`;
+      }).join('');
+    } else {
+      $target.innerHTML = `<div>No search results found</div>`;
+    }
+    var instance = new Mark("#app");
+    instance.mark(searchString)
+  });
+</script>
+{{ end }}
