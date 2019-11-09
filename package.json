@@ -13,6 +13,8 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "include-media": "^1.4.9",
+    "lunr": "^2.3.8",
+    "parser-front-matter": "^1.6.4",
     "postcss-cli": "^6.1.2",
     "rimraf": "^2.6.3"
   }

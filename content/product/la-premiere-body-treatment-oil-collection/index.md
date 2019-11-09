@@ -1,9 +1,11 @@
 ---
 categories:
   - Body
+tags: []
 title: 'La Premier Body Treatment Oil Collection'
 date: 2019-03-27T13:20:04+07:00
 draft: false
+ingredients: []
 direction: For best results, apply on damp skin and massage over the entire body.
 ---
 

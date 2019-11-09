@@ -1,6 +1,7 @@
 ---
 categories:
   - Hair
+tags: []
 title: 'Moroccan Argan Oil Treatment Shampoo'
 date: 2019-03-27T13:57:01+07:00
 draft: false

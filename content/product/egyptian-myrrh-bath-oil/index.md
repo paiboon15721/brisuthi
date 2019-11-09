@@ -1,6 +1,7 @@
 ---
 categories:
   - Body
+tags: []
 title: 'Egyptian Myrrh Bath Oil'
 date: 2019-03-27T13:53:56+07:00
 draft: false

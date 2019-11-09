@@ -1,6 +1,7 @@
 ---
 categories:
   - Hair
+tags: []
 title: 'Intensive Hair Mask'
 date: 2019-03-27T14:00:37+07:00
 draft: false
