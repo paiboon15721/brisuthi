@@ -1,11 +1,16 @@
 {{ define "content" }}
 <div class="container">
-  <form method="get" action="">
-    <input id="search" name="q" type="text" />
-    <button type="submit" class="button">Search</button>
-    <a href="/search">Clear</a>
-  </form>
-  <div id="app"></div>
+  <div class="page-header">
+    <h1 class="title">Search</h1>
+  </div>
+  <div class="content">
+    <form method="get" action="">
+      <input id="search" name="q" type="text" />
+      <button type="submit" class="button">Search</button>
+      <a href="/search">Clear</a>
+    </form>
+    <div id="app"></div>
+  </div>
 </div>
 {{ end }}
 {{ define "javascript" }}
@@ -33,9 +38,15 @@
   }, {});
   axios.get('/search-index.json').then(function (res) {
     const index = lunr.Index.load(res.data);
-    const matches = index.search(searchString);
+    const matches = index.search(`${searchString}~1`);
+    const matchBy = []
     const matchProducts = [];
     matches.forEach((m) => {
+      Object.keys(m.matchData.metadata).forEach(v => {
+        if(matchBy.indexOf(v) === -1) {
+          matchBy.push(v);
+        }
+      })
       matchProducts.push(productsByTitle[m.ref]);
     });
     if (matchProducts.length > 0) {
@@ -45,11 +56,11 @@
           <p>${p.content}...</p>
         </div>`;
       }).join('');
+      const instance = new Mark("#app");
+      instance.mark(matchBy)
     } else {
       $target.innerHTML = `<div>No search results found</div>`;
     }
-    var instance = new Mark("#app");
-    instance.mark(searchString)
   });
 </script>
 {{ end }}
