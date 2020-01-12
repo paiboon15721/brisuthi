@@ -1,13 +1,15 @@
 {{ define "content" }}
-<div class="container">
+<div class="container search">
   <div class="page-header">
     <h1 class="title">Search</h1>
   </div>
   <div class="content">
-    <form method="get" action="">
-      <input id="search" name="q" type="text" />
-      <button type="submit" class="button">Search</button>
-      <a href="/search">Clear</a>
+    <form method="get" class="form" action="">
+      <div class="form-control">
+        <input id="search" name="q" type="text" />
+        <button type="submit" class="button">Search</button>
+        <a href="/search">Clear</a>
+      </div>
     </form>
     <div id="app"></div>
   </div>
