@@ -1,6 +1,8 @@
 ---
 categories:
-  - Body
+  - Facial
+tags:
+  - Treat
 title: "Intensive Skin Recovery Essence"
 date: 2020-02-20T18:49:37+07:00
 draft: false
@@ -9,21 +11,7 @@ price: 1890
 direction: ""
 ingredients:
   [
-    "Rosmarinus officinalis water",
-    "Centella Asiatica Extract",
-    "Phaeodactylum Tricornutum Extract",
-    "Myrothamnus flabellifolia Extract",
-    "Eucalyptus globulus Leaf Extract",
-    "Acacia melanoxylon extract",
-    "Panax Ginseng Extract",
-    "Chenopodium Quinoa Seed Extract",
-    "Camellia Sinensis Leaf Extract",
-    "Hydrogenated Lecithin",
-    "Ceramide NP",
-    "Panthenol",
-    "Hexanediol",
-    "Cetearyl Olivate",
-    "Sorbitan Oleate",
+    "Rosmarinus officinalis water, Centella Asiatica Extract, Phaeodactylum Tricornutum Extract, Myrothamnus flabellifolia Extract, Eucalyptus globulus Leaf Extract, Acacia melanoxylon extract, Panax Ginseng Extract, Chenopodium Quinoa Seed Extract, Camellia Sinensis Leaf Extract, Hydrogenated Lecithin, Ceramide NP, Panthenol, Hexanediol, Cetearyl Olivate, Sorbitan Oleate",
   ]
 ---
 

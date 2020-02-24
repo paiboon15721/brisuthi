@@ -4,21 +4,12 @@ categories:
 title: "Ungurahua Hair Treatment Oil"
 date: 2020-02-20T18:50:46+07:00
 draft: false
-size: 50
-price: 1500
+size: 100
+price: 1890
 direction: ""
 ingredients:
   [
-    Oenocarpus Bataua Oil,
-    Pentaclethra Macroloba Seed Oil,
-    Acrocomia aculeata ( Macauba) Oil,
-    Elaeis melanoccoca Oil,
-    Lavandula Angustifolia (Lavender) Oil,
-    Juniperus Communis Fruit Oil,
-    Rosmarinus officinalis (Rosemary) Leaf Oil,
-    Salvia officinalis (Sage) Oil,
-    Cedrus Atlantica) Bark Oil,
-    Pelargonium graveolens Flower Oil,
+    "Oenocarpus Bataua Oil, Pentaclethra Macroloba Seed Oil, Acrocomia aculeata (Macauba) Oil, Elaeis melanoccoca Oil, Lavandula Angustifolia (Lavender) Oil, Juniperus Communis Fruit Oil, Rosmarinus officinalis (Rosemary) Leaf Oil, Salvia officinalis (Sage) Oil, Cedrus Atlantica) Bark Oil, Pelargonium graveolens Flower Oil",
   ]
 ---
 
